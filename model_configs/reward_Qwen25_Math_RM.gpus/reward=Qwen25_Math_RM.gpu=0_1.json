@@ -1,0 +1,3 @@
+{
+    "reward_model": {"name": "Qwen25_Math_RM", "path": "/mnt/2050data/public/ckpt/haiye/llms/Qwen2.5-Math-RM-72B/models--Qwen--Qwen2.5-Math-RM-72B/snapshots/930d8b3c1842dffe813076901baac1a1be54e9dd", "GPU": "0,1" }
+}

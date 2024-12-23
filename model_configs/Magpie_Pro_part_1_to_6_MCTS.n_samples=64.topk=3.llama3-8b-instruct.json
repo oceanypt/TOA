@@ -1,0 +1,12 @@
+{
+    "policy_model": {
+            "MagPro_p1_to_6_MCTS.n=64.topk=3.lla3-8b-ins": {
+                "path_to_model": "/mnt/data/haiye/ensemble_inference/ensemble_inference/alignment-handbook/data/Magpie_Pro_part_1_to_6_MCTS.n_samples=64.topk=3.llama3-8b-instruct",
+                "path_to_chat_template": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/magpie_llama-3-8b-train_data=1_8_80000.jinja",
+                "stop_tokens": "['<|end_of_text|>']",
+                "api_key": "2723hsd2623huj323hsuejsijsd237",
+                "port": 8000,
+                "GPU": "0"
+        }
+    }
+}

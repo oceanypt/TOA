@@ -1,0 +1,14 @@
+{
+    "policy_model": {
+            "Mixtral-8x22B-Instruct-v0.1": {
+                "path_to_model": "/mnt/2050data/public/ckpt/haiye/llms/Mixtral-8x22B-Instruct-v0.1",
+                "path_to_chat_template": "/mnt/2050data/haiye/ensemble_inference/ensemble_inference/chat_templates/Mixtral-8x22B-Instruct-v0.1.jinja",
+                "stop_tokens": "['</s>']",
+                "api_key": "238sdhidhhisd82y3n",
+                "port": 8000,
+                "GPU": "0,1,2,3",
+                "gpu_utilize": 0.9,
+                "host": "dlchtt7gmahrjf5p-master-0"
+        }
+    }
+}

@@ -1,0 +1,3 @@
+{
+    "reward_model": {"name": "InternRM", "path": "/mnt/data/haiye/llms/internlm2-20b-reward", "GPU": "7" }
+}

@@ -1,0 +1,14 @@
+{
+    "policy_model": {
+            "Llama-3.1-70B-Instruct": {
+                "path_to_model": "/mnt/2050data/public/ckpt/haiye/llms/Meta-Llama-3.1-70B-Instruct/",
+                "path_to_chat_template": "/mnt/2050data/haiye/ensemble_inference/ensemble_inference/chat_templates/llama-3.1-70b-instruct.jinja",
+                "stop_tokens": "['<|eot_id|>']",
+                "api_key": "2723hsduj323hsuejsijsd237",
+                "port": 8001,
+                "GPU": "4,5,6,7",
+                "gpu_utilize": 0.9,
+                "host": "dlchtt7gmahrjf5p-master-0"
+        }
+    }
+}

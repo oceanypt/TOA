@@ -1,0 +1,12 @@
+{
+    "policy_model": {
+            "Magpie-Air.part_1_to_8_MCTS.n_samples=20.llama3-8b-instruct_SimPO": {
+                "path_to_model": "/mnt/data/haiye/ensemble_inference/ensemble_inference/SimPO/bash/outputs/Magpie-Air-part_1_to_8.num=80000.MCTS.n_samples=20.1p_1n.llama3-8b-instruct_SimPO",
+                "path_to_chat_template": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/magpie_llama-3-8b-train_data=1_8_80000.jinja",
+                "stop_tokens": "['<|eot_id|>']",
+                "api_key": "2723hsd2623huj323hsuejsijsd237",
+                "port": 8000,
+                "GPU": "0"
+        }
+    }
+}

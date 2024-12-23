@@ -1,0 +1,17 @@
+{
+    "llama-3-8b-instruct": {
+        "model_path": "/mnt/data/haiye/llms/Meta-Llama-3-8B-Instruct/models--meta-llama--Meta-Llama-3-8B-Instruct/snapshots/e1945c40cd546c78e41f1151f4db032b271faeaa",
+        "path_to_prompt": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/templates/llama-3-chat.json",
+        "stop_tokens": "['<|eot_id|>']"
+    },
+    "Mistral-7B-Instruct-v0.2": {
+        "model_path": "/mnt/data/haiye/llms/Mistral-7B-Instruct-v0.2/models--mistralai--Mistral-7B-Instruct-v0.2/snapshots/99259002b41e116d28ccb2d04a9fbe22baed0c7f",
+        "path_to_prompt": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/templates/mistral-instruct.json",
+        "stop_tokens": "['</s>']"
+    },
+    "Qwen1.5-14B-Chat": {
+        "model_path": "/mnt/data/haiye/llms/Qwen1.5-14B-Chat/models--Qwen--Qwen1.5-14B-Chat/snapshots/9492b22871f43e975435455f5c616c77fe7a50ec",
+        "path_to_prompt": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/templates/qwen1.5-14b-chat.json",
+        "stop_tokens": "['<|im_end|>']"
+    }
+}

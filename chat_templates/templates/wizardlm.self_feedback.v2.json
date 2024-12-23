@@ -1,0 +1,6 @@
+{
+    "description": "Template with self feedback. The input is the first round response. We also generate the issues of the response.",
+    "prompt_input": "[Question]\n{instruction}\n\n[Start of the Reference Answer]\n{input}\n\n[End of the Reference Answer]\n\n[Instruction]\nYou are a good corrector of the reference answer. Given the above reference answer to the question, you have to improve the answer, from the aspects of helpfulness, relevance, correctness, and level of detail of the answer. Avoid any factual errors and hallucinations. You first have to point out the issues of the reference answer, and put these issues between [Start of Issues] and [End of Issues]. Then, you provide the improved answer between [Start of Improved Answer] and [End of Improved Answer].\n\n### Response:",
+    "prompt_no_input": "{instruction}\n\n### Response:",
+    "response_split": "### Response:"    
+}

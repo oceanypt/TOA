@@ -1,0 +1,14 @@
+{
+    "policy_model": {
+            "Qwen2-72B-Instruct": {
+                "path_to_model": "/mnt/data/haiye/llms/Qwen2-72B-Instruct",
+                "path_to_chat_template": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/Qwen2-72B-instruct.jinja",
+                "stop_tokens": "['<|im_end|>']",
+                "api_key": "27223hisdihisd923jhik3hsdhuj323hsuejsijsd237",
+                "port": 8001,
+                "GPU": "0,1,2,3",
+                "gpu_utilize": 0.85
+        }
+    },
+    "reward_model": {"name": "ArmoRM", "path": "/mnt/data/haiye/llms/ArmoRM-Llama3-8B-v0.1/models--RLHFlow--ArmoRM-Llama3-8B-v0.1/snapshots/86323c8a6543c7fac07e9b0583b9443978b1e3a3", "GPU": "4" }
+}

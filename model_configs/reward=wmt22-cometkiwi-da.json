@@ -1,0 +1,4 @@
+{
+    "reward_model": "wmt22-cometkiwi-da",
+    "model_path": "/mnt/data/haiye/llms/Unbabel_comet/models--Unbabel--wmt22-cometkiwi-da/snapshots/b3a8aea5a5fc22db68a554b92b3d96eb6ea75cc9/checkpoints/model.ckpt"
+}

@@ -1,0 +1,3 @@
+{
+    "reward_model": {"name": "Shepherd_MATH_PRM", "path": "/mnt/data/haiye/llms/math-shepherd-mistral-7b-prm/models--peiyi9979--math-shepherd-mistral-7b-prm/snapshots/45dc0a3c9ec699b645085c098ed38dc99fba4617", "GPU": "1" }
+}

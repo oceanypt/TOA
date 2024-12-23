@@ -1,0 +1,6 @@
+{
+    "reward_model": [
+        {"name": "ArmoRM", "path": "/mnt/data/haiye/llms/ArmoRM-Llama3-8B-v0.1/models--RLHFlow--ArmoRM-Llama3-8B-v0.1/snapshots/86323c8a6543c7fac07e9b0583b9443978b1e3a3", "GPU": "0", "tau": 0.1},
+        {"name": "InternRM", "path": "/mnt/data/haiye/llms/internlm2-20b-reward", "GPU": "0", "tau": 1}
+    ]
+}

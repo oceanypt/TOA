@@ -1,0 +1,12 @@
+{
+    "policy_model": {
+            "ultrafeedback_llama3-8b-instruct_sft_data=prs_lla3.1_8b": {
+                "path_to_model": "/mnt/2050data/haiye/ensemble_inference/ensemble_inference/alignment-handbook/data/ultrafeedback_llama3-8b-instruct_sft_data=prs_lla3.1_8b",
+                "path_to_chat_template": "/mnt/2050data/haiye/ensemble_inference/ensemble_inference/chat_templates/llama-3-instruct.jinja",
+                "stop_tokens": "['<|eot_id|>']",
+                "api_key": "2723hsd2623huj323hsuejsijsd237",
+                "port": 8000,
+                "GPU": "0"
+        }
+    }
+}

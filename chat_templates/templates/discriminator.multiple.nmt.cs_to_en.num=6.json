@@ -1,0 +1,6 @@
+{
+    "description": "Template for training discriminator to classify the Response into 0 to 5",
+    "prompt_input": "Please act as a precise judge and evaluate the quality of the translation to the input. The translation is from cs to en. Rate the translation from 0 to 5, where a higher value means a better translation. Please respond with an integer between 0 and 5. \n\n[Input]\n{instruction}\n\n[Translation]\n{input}\n\n##Response:",
+    "prompt_no_input": "Please act as a precise judge and evaluate the quality of the translation to the input. The translation is from cs to en. Rate the translation from 0 to 5, where a higher value means a better translation. Please respond with an integer between 0 and 5. \n\n[Input]\n{instruction}\n\n[Translation]\n{input}\n\n##Response:",
+    "response_split": "##Response:"
+}

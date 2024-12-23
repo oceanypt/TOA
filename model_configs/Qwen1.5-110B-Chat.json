@@ -1,0 +1,14 @@
+{
+    "policy_model": {
+            "Qwen1.5-110B-Chat": {
+                "path_to_model": "/mnt/data/haiye/llms/Qwen1.5-110B-Chat",
+                "path_to_chat_template": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/Qwen1.5-110B-Chat.jinja",
+                "stop_tokens": "['<|im_end|>']",
+                "api_key": "8238236824348012",
+                "port": 8003,
+                "GPU": "0,1,2,3,4,5,6,7",
+                "gpu_utilize": 0.9,
+                "host": "dlc1t66d52h2qzgj-master-0"
+        }
+    }
+}

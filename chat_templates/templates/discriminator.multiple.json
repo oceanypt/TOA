@@ -1,0 +1,6 @@
+{
+    "description": "Template for training discriminator to classify the response into 1 or 0",
+    "prompt_input": "Please act as a precise judge and evaluate the quality of the answer to question. Rate the answer from 0 to 5, where a higher value means a better answer. Please respond with an integer between 0 and 5. \n\n[Question]\n{instruction}\n\n[Answer]\n{input}\n\n##Response:",
+    "prompt_no_input": "Please act as a precise judge and evaluate the quality of the answer to question. Rate the answer from 0 to 5, where a higher value means a better answer. Please respond with an integer between 0 and 5. \n\n[Question]\n{instruction}\n\n[Answer]\n{input}\n\n##Response:",
+    "response_split": "##Response:"
+}

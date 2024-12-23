@@ -1,0 +1,1 @@
+{% for message in messages %}{% if loop.first and messages[0]['role'] != 'system' %}{{message['content']}}{% endif %}{% endfor %}

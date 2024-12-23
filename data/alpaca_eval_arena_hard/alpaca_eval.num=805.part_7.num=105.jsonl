@@ -1,0 +1,105 @@
+{"instruction": "We have entered the home supplies budget in the following table. Calculate the last column with the given function and rewrite the completed table.\nNote that, columns in a row are separated using a comma, and rows are separated using a \"|\".\n\nItem, Qty, Price, Subtotal | mango, 5, 500, ? | apple, 4, 150, ? | oil, 2, 1500, ?  \nFunction: column2 * column 3", "dataset": "selfinstruct", "id": 488}
+{"instruction": "Complete the following company description:\nHippoplaisir is a psychologists & counseling services provider based in Belgium, that specializes in Horse Riding Lessons and", "dataset": "oasst", "id": 373}
+{"instruction": "Using the provided topic as a starting point, brainstorm ideas for videos that can be made about it on YouTube.\n\nIn spite of the fact that procrastination feels bad to you, why do you do it?", "dataset": "selfinstruct", "id": 539}
+{"instruction": "Based on the given keywords, write a review of a restaurant.\n\nName: Pizzeria\ngood prices, quiet place, tasty, nice staff", "dataset": "selfinstruct", "id": 696}
+{"instruction": "Help me get a job in the government in which I’ll have major bargaining power", "dataset": "oasst", "id": 456}
+{"instruction": "I want to talk about \"Smooth\",  a song by Rob Thomas.", "dataset": "helpful_base", "id": 109}
+{"instruction": "You should take the time to read the situation and problem carefully and give the best advice you can.\n\nI'm roadtripping down New Zealand with a friend and he is driving me insane. He hasn't enjoyed all the tours we've been on and doesn't want to chat about ANYTHING. We're a week into our trip and this is the quietest I've ever been when hanging out with another person as he rebuffs all my attempts at conversation. He wears his airpods in the car and around the accommodation - not that I've kept trying to talk to him. Honestly, he is bringing some seriously bad vibes to everything and it's ruining my trip.\nWe don't have anything booked in yet for the South Island, so I'm planning to ditch him in Wellington at the ferry. Probably book my own car in Picton and just relax alone for the rest of the trip. (Just thinking about it is such sharp relief that it makes me feel emotional. I'll pay whatever price I have to just to get away from him.)\nObviously telling him he is ruining my trip with his negative energy isn't the best way to approach this.\nAny advice for the best approach so we can split amicably? Or at least not have an argument that ends with very hurt feelings?", "dataset": "selfinstruct", "id": 521}
+{"instruction": "do you think retinoid is effective on removing the acne? because I have a lot of it", "dataset": "helpful_base", "id": 10}
+{"instruction": "You should write a Product Description that will persuade the buyer that the product is beneficial.\n\nFlipslide Game, Electronic Handheld Game | Flip, Slide, and Match the Colors to Beat the Clock - 4 Game Modes - Multiplayer Fun", "dataset": "selfinstruct", "id": 502}
+{"instruction": "Implement a Python function to find the longest common subsequence of two input strings using dynamic programming.", "dataset": "vicuna", "id": 786}
+{"instruction": "How do I make escargot?", "dataset": "helpful_base", "id": 36}
+{"instruction": "Write me a Graphic Novel plot in the style of Neil Stephenson.", "dataset": "oasst", "id": 414}
+{"instruction": "I need to learn English could you help me and make a exercise", "dataset": "koala", "id": 191}
+{"instruction": "Use appropriate emojis to convey the meaning in the given text.\n\nCute cat\nplayful\nSoft", "dataset": "selfinstruct", "id": 537}
+{"instruction": "if it takes 8 hours to fly to Singapore, stop over for an hour and a half and then fly 14 hours to London then what is the total travel time if the plane is delayed in Singapore", "dataset": "oasst", "id": 359}
+{"instruction": "Write an email to attendees as a reminder that the event is coming up.", "dataset": "selfinstruct", "id": 548}
+{"instruction": "I'm preparing a fun session with work colleagues in a tech company. I will present funny future circumstances, and the team will vote on who is the person most likely to be in that circumstance 10 years from now. The circumstances must be funny yet respectful and safe for work. Please help me come up with a few of these circumstances. To help you, please consider this example: \"In 10 years time, who is the most likely to have won the lottery\"", "dataset": "koala", "id": 217}
+{"instruction": "How do you become an author?", "dataset": "helpful_base", "id": 23}
+{"instruction": "Write a Jira ticket for the given task.\n\nNew Employee onboarding", "dataset": "selfinstruct", "id": 692}
+{"instruction": "Hi, I have some falafel, but no tahini to put on them. Can you give me a recipe for making tahini?", "dataset": "helpful_base", "id": 38}
+{"instruction": "What is the meaning of life?", "dataset": "oasst", "id": 403}
+{"instruction": "As part of software engineering, user stories describe what the user wants the system to do, while acceptance criteria describe the conditions a specific user story must meet. Create basic acceptance criteria based on the given user story.\n\nUser story: As a user, I want to use a search field to type a city, name, or street, so that I could find matching hotel options.", "dataset": "selfinstruct", "id": 690}
+{"instruction": "How can you assess the credibility of a source of information, such as a news article or blog post, without relying solely on the reputation of the author or publisher?", "dataset": "vicuna", "id": 760}
+{"instruction": "Write a program to find the nth Fibonacci number using dynamic programming.", "dataset": "vicuna", "id": 788}
+{"instruction": "I live in New Zealand. Given the regulations here, would it be possible for me to own an operational fighter jet? If so, what steps would I need to take to be qualified to fly it?", "dataset": "oasst", "id": 325}
+{"instruction": "Why did humans evolve to believe in God?", "dataset": "helpful_base", "id": 44}
+{"instruction": "To increase the energy efficiency of windows, additional glass pane is added. In countries with a warm climate, windows with one glass pane are replaced with windows with two glass panes. Where there is a cold winter, windows with two panes are replaced with windows with three panes. Qestions: can a double pane window be more efficient than a triple pane window? Can a single pane window be more efficient than a double pane window? If yes, what is needed for this? Support your answer with appropriate calculations.\n", "dataset": "koala", "id": 283}
+{"instruction": "Is it true that the native Australians were really prisoners of England?", "dataset": "helpful_base", "id": 112}
+{"instruction": "Using critical thinking methods, how would you approach and solve the following problem: A local restaurant is experiencing a decrease in customers, and the owner wants to understand the cause and find a solution. What steps would you take to gather information, analyze the situation, and develop potential solutions?", "dataset": "oasst", "id": 450}
+{"instruction": "Think of some series or movies that would be enjoyable for someone who liked the given series.\n\nSquid Game", "dataset": "selfinstruct", "id": 507}
+{"instruction": "what would be a good idea for a quiz about omnichannel marketing on my website", "dataset": "koala", "id": 216}
+{"instruction": "Make a list of desirable Skills for software engineers to add to LinkedIn.", "dataset": "selfinstruct", "id": 499}
+{"instruction": "Should I use the boiling water method or Ammonia fermentation to make dye out of mixed Hypogymnia lichen?", "dataset": "oasst", "id": 388}
+{"instruction": "Introduce the ”financial markets and institutions“ by Frederic S. Mishkin", "dataset": "koala", "id": 196}
+{"instruction": "can you list in bullet points for the role of digital health in preventing the diseases", "dataset": "koala", "id": 278}
+{"instruction": "I live in Scotland and would like to know the most cost effective way to heat my house considering the rise in both gas and electric prices. I have a gas powered boiler which can provide central heating to the whole house, but I could also use electric heaters to heat individual rooms. Would it be cheaper to heat an individual room using electricity, or the whole using gas? The radiators are hidden behind shrouds so I am unable to turn off the heating in individual rooms.", "dataset": "oasst", "id": 372}
+{"instruction": "Pretend to be a character in a post-apocalyptic world. Describe how you survive and the allies you encounter.", "dataset": "vicuna", "id": 754}
+{"instruction": "Come up with healthy and easy dinner ideas for weeknights.", "dataset": "selfinstruct", "id": 601}
+{"instruction": "As a superhero, how would you explain your origin story to a curious child?", "dataset": "vicuna", "id": 748}
+{"instruction": "rank the following companies by how pro-consumer they are:\nMicrosoft, Google, Nintendo, Sony, EA.", "dataset": "koala", "id": 143}
+{"instruction": "When were smart phones first made?", "dataset": "helpful_base", "id": 91}
+{"instruction": "write a chronology of important events related to ESG in 2022", "dataset": "koala", "id": 263}
+{"instruction": "What are some Nietzsche's philosophical ideas that still influence modern-day culture?", "dataset": "oasst", "id": 394}
+{"instruction": "I am an aikido teacher and student of Tomita Seiji who is living in Belgium. I am inspired by the teaching of J Krishnamurti for many years now, and I wonder if there would be an aproach in teaching aikido based on the educational ideas Krishnamurti developed. Can you suggested some posibilities in a concise way?", "dataset": "koala", "id": 226}
+{"instruction": "Did Facebook corporation change its name?", "dataset": "helpful_base", "id": 93}
+{"instruction": "I'm trying to teach myself to have nicer handwriting. Can you help?", "dataset": "helpful_base", "id": 11}
+{"instruction": "what are african governments doing to improve air traffic connectivity", "dataset": "koala", "id": 236}
+{"instruction": "You will simulate an SEO expert. What keywords should a screenwriting software target", "dataset": "koala", "id": 218}
+{"instruction": "What if the Beatles had never formed as a band?", "dataset": "vicuna", "id": 779}
+{"instruction": "Describe a scenario where artificial intelligence could be used to improve the quality and efficiency of healthcare delivery.", "dataset": "vicuna", "id": 739}
+{"instruction": "What is the output of the given LATEX code?\n\n\\documentclass{article}\n\\begin{document}\nFirst document. This is a simple example, with no \nextra parameters or packages included.\n\\end{document}", "dataset": "selfinstruct", "id": 513}
+{"instruction": "Bob has two sons. John and Jay. Jay has one brother and father. The father has two sons.\nJay's brother has a brother and a father. Who is Jay's brother.", "dataset": "oasst", "id": 362}
+{"instruction": "Find sentences from reliable sources such as the Guardian or Forbes that contain the exact match for the given sentence or phrase. Also, mention the source of each sentence.\n\nThere are great options", "dataset": "selfinstruct", "id": 493}
+{"instruction": "hat would be the reason for the popularity of youtube compared to other video sharing websites?", "dataset": "koala", "id": 160}
+{"instruction": "It would be helpful if you could suggest an acronym for the repository.\n\nA python framework for creating, editing, and invoking Noisy Intermediate Scale Quantum (NISQ) circuits.", "dataset": "selfinstruct", "id": 549}
+{"instruction": "Given a programming language and the name of a function, write a command to show how to use the function.\n\nLanguage: Python\nFunction: input", "dataset": "selfinstruct", "id": 678}
+{"instruction": "You are given a description that provides a set of facts or a scenario. It is up to you to craft a story from these facts and scenarios. The missing pieces must be filled in with imaginative but logical information.\n\nTen European football teams – the Netherlands, England, Belgium, Denmark, France, Germany, Norway, Sweden, Switzerland and Wales – will participate in a season-long “OneLove” campaign promoting inclusion and opposing discrimination.", "dataset": "selfinstruct", "id": 522}
+{"instruction": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some Indonesian dishes. Can you give me a recipe for Tahu Gejrot Cirebon?", "dataset": "helpful_base", "id": 100}
+{"instruction": "I bought two shirts from the store and each one cost me $10. I also bought a pair of pants and they cost me $20. Then, I bought a dress and it cost me $30. Also,  I bought a pair of shoes and they cost me $40. Lastly, I bought a jacket and it cost me $50.\n\nMake a table chart showing items, the number, and the price of these items. Separate columns with \"|\".", "dataset": "selfinstruct", "id": 492}
+{"instruction": "You are given a Python command and are required to convert it into Ruby.\n\nprint(\"Hello World!\")", "dataset": "selfinstruct", "id": 668}
+{"instruction": "can you write haiku for different inductive biases in deep learning models? start with attention", "dataset": "oasst", "id": 439}
+{"instruction": "Imagine you are a time traveler from the year 3000. What technological advancements would you tell people about?", "dataset": "vicuna", "id": 749}
+{"instruction": "List pros and cons of lowering the capabilities of my ears by listening to loud music (70-75db) in order to withstand the incredibly loud sound of screaming kids at school.", "dataset": "oasst", "id": 392}
+{"instruction": "As a sports commentator, describe the winning play in the final seconds of a championship game.", "dataset": "vicuna", "id": 750}
+{"instruction": "Why so many people like film photography when digital camera and mobile phone are more convenient and generate higher quality of photos?", "dataset": "oasst", "id": 308}
+{"instruction": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some Uruguayan dishes. Can you give me a recipe for Vitel toné?", "dataset": "helpful_base", "id": 76}
+{"instruction": "Has there been any news regarding a potential release date for Starcraft 3?", "dataset": "helpful_base", "id": 122}
+{"instruction": "convert December 21 · 1:00 – 1:50pm pacific to asia/taipei time", "dataset": "koala", "id": 133}
+{"instruction": "Write a short analysis of the cinematography in the movie.\n\nDead Poets Society", "dataset": "selfinstruct", "id": 556}
+{"instruction": "Hi, I'd like to learn to bake challah. Can you give me a recipe for that?", "dataset": "helpful_base", "id": 92}
+{"instruction": "Give a brief summary of the movie or series' plot.\n\nBreaking Bad (TV Series 2008–2013)", "dataset": "selfinstruct", "id": 554}
+{"instruction": "What is the james webb telescope", "dataset": "oasst", "id": 407}
+{"instruction": "Hi, I've decided to keep a rat as a pet. How do I house, feed, and otherwise care for it?", "dataset": "helpful_base", "id": 82}
+{"instruction": "In minecraft, what are the best ways to farm experience quickly? Name pros and cons", "dataset": "oasst", "id": 413}
+{"instruction": "Using the Roblox Luau language, how would I make a script that finds the nearest character to me, then teleports me to that character? Make a separate function for getting the nearest character and then incorporate it into the main code.", "dataset": "oasst", "id": 290}
+{"instruction": "How did mankind discover that the earth was spherical, and why did they initially believe it to be flat?", "dataset": "helpful_base", "id": 42}
+{"instruction": "Can you help me write a resignation letter to my current employer, while leaving on good terms and expressing gratitude for the opportunities provided?", "dataset": "vicuna", "id": 796}
+{"instruction": "How do social media platforms influence the way people consume and share news, and what are the potential implications for the spread of misinformation?", "dataset": "vicuna", "id": 742}
+{"instruction": "Write 50 short stories under ten words in a creative and new way", "dataset": "koala", "id": 279}
+{"instruction": "How do I clean my armpits?", "dataset": "helpful_base", "id": 29}
+{"instruction": "What type of Rifle is an AK47?", "dataset": "oasst", "id": 385}
+{"instruction": "Why does it feel like less effort to watch 3 - hour long TV episodes back to back than a film?", "dataset": "koala", "id": 257}
+{"instruction": "does the dinosaurs really exist?", "dataset": "helpful_base", "id": 118}
+{"instruction": "How did US states get their names?", "dataset": "helpful_base", "id": 1}
+{"instruction": "Make a list of the top places in the U.S. to visit at the given time.\n\nNovember", "dataset": "selfinstruct", "id": 560}
+{"instruction": "Make a list of adjectives that can be used to describe the given brand.\n\na creative tech startup", "dataset": "selfinstruct", "id": 681}
+{"instruction": "Write me a SPL (Shakespeare Programming Language) program that takes 2 numbers from the user and outputs the product of the two numbers.", "dataset": "oasst", "id": 466}
+{"instruction": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some Danish dishes. Can you give me a recipe for Flæskesteg?", "dataset": "helpful_base", "id": 52}
+{"instruction": "Write me a function in JavaScript that takes an array of 5 numbers as input and checks if any of the numbers is a valid prime number, if it is print the number to the console.", "dataset": "oasst", "id": 405}
+{"instruction": "Can you describe the process that use to generate answers? Please provide a step by step explanation.", "dataset": "oasst", "id": 442}
+{"instruction": "Paraphrase the given text in an academic style.\n\nLots of papers have been published on this topic.", "dataset": "selfinstruct", "id": 693}
+{"instruction": "Make a list of common phrases for the given section of the paper.\n\nIntroduction", "dataset": "selfinstruct", "id": 701}
+{"instruction": "Suggest some Audiobooks for First-Time Listeners. You can attract them by choosing popular works.", "dataset": "selfinstruct", "id": 519}
+{"instruction": "Implement a regular expression in Python to validate an email address.", "dataset": "vicuna", "id": 787}
+{"instruction": "what is the recommended pattern for creating games in godot", "dataset": "koala", "id": 213}
+{"instruction": "Given two matrices A and B which you can multiply together, does (A B)^T = A^T B^T or B^T A^T?", "dataset": "oasst", "id": 402}
+{"instruction": "How can observing the behavior of other people in a social situation provide clues about cultural norms and expectations?", "dataset": "vicuna", "id": 762}
+{"instruction": "What causes the northern lights?", "dataset": "helpful_base", "id": 26}
+{"instruction": "What are some words to express love and affection in Tolkien's Quenya?", "dataset": "oasst", "id": 386}
+{"instruction": "If the endpoints of a line segment are (2, -2) and (10, 4), what is the length of the segment?", "dataset": "vicuna", "id": 794}
+{"instruction": "Write a story about Anakin Skywalker encountering a Jedi who speaks and acts like a 1920s British aristocrat", "dataset": "koala", "id": 182}
+{"instruction": "I heard something about a number of British folks being deceived into believing that spaghetti grows on trees. Is this real? If so, how were they able to be drawn into a deception like this?", "dataset": "oasst", "id": 302}
+{"instruction": "I like to host guests at my home from time to time, and I am gathering  recipes of different dishes and drinks to keep things interesting. I am interested in trying some Ukrainian dishes. Can you give me a recipe for Okroshka?", "dataset": "helpful_base", "id": 57}
+{"instruction": "What are the main differences between Python and JavaScript programming languages?", "dataset": "vicuna", "id": 727}
+{"instruction": "Why do people give Reddit Gold to admins?", "dataset": "koala", "id": 155}

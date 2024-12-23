@@ -1,0 +1,12 @@
+{
+    "policy_model": {
+            "llama-3-8b-instruct": {
+                "path_to_model": "/mnt/data/haiye/llms/Meta-Llama-3-8B-Instruct/models--meta-llama--Meta-Llama-3-8B-Instruct/snapshots/e1945c40cd546c78e41f1151f4db032b271faeaa",
+                "path_to_chat_template": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/llama-3-instruct.jinja",
+                "stop_tokens": "['<|eot_id|>']",
+                "api_key": "2723hsd2623huj323hsuejsijsd237",
+                "port": 8000,
+                "GPU": "0"
+        }
+    }
+}

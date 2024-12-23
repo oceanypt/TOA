@@ -1,0 +1,14 @@
+{
+    "policy_model": {
+            "Qwen2-72B-Instruct": {
+                "path_to_model": "/mnt/2050data/public/ckpt/haiye/llms/Qwen2-72B-Instruct",
+                "path_to_chat_template": "/mnt/2050data/haiye/ensemble_inference/ensemble_inference/chat_templates/Qwen2-72B-instruct.jinja",
+                "stop_tokens": "['<|im_end|>']",
+                "api_key": "27223hisdihisd923jhik3hsdhuj323hsuejsijsd237",
+                "port": 8002,
+                "GPU": "0,1,2,3,4,5,6,7",
+                "gpu_utilize": 0.9,
+                "host": "dlc1lru4g60avg79-master-0"
+        }
+    }
+}

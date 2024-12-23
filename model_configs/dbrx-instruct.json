@@ -1,0 +1,14 @@
+{
+    "policy_model": {
+            "dbrx-instruct": {
+                "path_to_model": "/mnt/data/haiye/llms/dbrx-instruct/",
+                "path_to_chat_template": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/dbrx-instruct.jinja",
+                "stop_tokens": "['<|endoftext|>']",
+                "api_key": "2723hsduj323hsuejsijsd237",
+                "port": 8001,
+                "GPU": "4,5,6,7",
+                "gpu_utilize": 0.9,
+                "host": "dlchtt7gmahrjf5p-master-0"
+        }
+    }
+}

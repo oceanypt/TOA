@@ -1,0 +1,6 @@
+{
+    "description": "Template used by nmt, the target is english",
+    "prompt_input": "Please translate the following sentence into English.\n\n### Input:\n{input}\n\n### Response:\n",
+    "prompt_no_input": "Please translate the following sentence into English.\n\n### Input:\n{input}\n\n### Response:\n",
+    "response_split": "### Response:"
+}
