@@ -37,7 +37,37 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 
 
 
-
+Root (项目根目录)
+│
+├── README.md
+│   └── 项目介绍、使用方法和说明文件
+│
+├── LICENSE
+│   └── 项目许可证文件，规定项目的使用规则
+│
+├── .DS_Store
+│   └── macOS 系统生成的临时文件，建议忽略
+│
+├── bash/
+│   └── 包含用于项目自动化或环境配置的脚本
+│
+├── chat_templates/
+│   └── 提供对话或交互模型的预定义模板
+│
+├── code/
+│   └── 核心代码目录，包括模型训练、测试和评估的脚本
+│
+├── data/
+│   └── 数据存储目录，可能包括训练、测试数据或中间处理结果
+│
+├── figures/
+│   └── 用于存放项目生成的图表、可视化或报告图像
+│
+├── model_configs/
+│   └── 存放模型配置文件（例如参数设置）
+│
+└── useful_code/
+    └── 实用代码片段，可能是额外的工具或辅助脚本
 
 
 
@@ -94,6 +124,8 @@ python start_server.vllm.py path_to_config root_to_save GPU port gpu_utilize
 
 You can start the server for different models, just make sure to save all the server configuration into one same folder, that is [root_to_save](). 
 
+
+### 
 
 
 
