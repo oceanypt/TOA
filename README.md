@@ -32,7 +32,7 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 - 🔓 **Open-source models**: [Llama Series](https://huggingface.co/meta-llama), [Qwen Series](https://huggingface.co/Qwen), [Mistral Series](https://huggingface.co/mistralai), and more.
 - 🔒 **Closed-source models**: OpenAI, Claude, etc.
 - 😊 **OpenAI Compatible Server**: We support OpenAI compatible API to use the models. 
-- 🔨 **Reward Model Integration**: TOA utilizes a reward model to guide and optimize the generation process. You can easily specifiy a your own reward model.
+- 🎯 **Reward Model Integration**: TOA utilizes a reward model to guide and optimize the generation process. You can easily specifiy a your own reward model.
 - 💰 **Compute Efficient**: For each input question, TOA optimizes the generation structure dynamically with MCTS-based search, making our method more compute-efficient than other baselines for data synthesis. 
 
 
