@@ -37,6 +37,18 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 - 📣 **Support Various Methods**: Our repository implements various methods for single- and multi-agent sampling.
 
 
+## Supported Methods
+| Method              | Paper        | Example Code |
+|---------------------|--------------|--------------|
+| Random Sampling     | [Link]()     | -            |
+| PRS                 | [Link]()     | -            |
+| Parallel Ensemble   | [Link]()     | -            |
+| Sequential Refine   | [Link]()     | -            |
+| MoA                 | [Link]()     | -            |
+| TOA (ours)          | [Link]()     | -            |
+
+
+
 ## Project Directory Structure
 
 - **README.md**
@@ -146,15 +158,9 @@ For the personalized model, you may need to revise the code [code/reward.py](./c
 Now, we can start data generation!
 ```bash
 cd bash
-cd 
+cd exp_alpaca_eval
+bash run_generate.api.mcts.pre_load.sh
 ```
-
-
-
-
-
-
-
 
 
 
