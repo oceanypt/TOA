@@ -53,6 +53,20 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 Random sampling and PRS are single-agent based methods. 
 
 
+## Synthesized Alignment Data
+| Huggingface [SFT Data]                                                                                               | Huggingface [DPO Data]                                                                                     |
+|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| [Rand-Qwen2-7B-Inst](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-Rand-qwen2-7b-inst)             | [TOA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-DPO-TOA-model-num-4)                      |
+| [Rand-Lla3.1-8B-Inst](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-Rand-lla3.1-8b-inst)            |                                                                                                            |
+| [PRS-Qwen2-7B-Inst](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-PRS-qwen2-7b-inst)               |                                                                                                            |
+| [PRS-Lla3.1-8B-Inst](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-PRS-lla3.1-8b-inst)             |                                                                                                            |
+| [Par.Eesemble](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-Ensemble-model-num-4)                 |                                                                                                            |
+| [SeqRefine](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-SeqRefine-model-num-4)                   |                                                                                                            |
+| [MoA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-MoA-model-num-4)                               |                                                                                                            |
+| [TOA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-TOA-model-num-4)                               |                                                                                                            |
+
+
+
 
 ## Project Directory Structure
 
