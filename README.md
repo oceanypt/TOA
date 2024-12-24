@@ -11,11 +11,17 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
   <img src="./figures/mas.png" alt="Multi" width="400">
 </p> -->
 
-<div style="text-align: center;">
+<!-- <div style="text-align: center;">
   <img src="./figures/mas.png" alt="描述文字" width="300">
   <p style="margin-top: 5px; font-size: 14px; color: gray;">Mlsdhisdhi</p>
-</div>
+</div> -->
 
+
+<p align="center">
+  <img src="./figures/mas.png" alt="描述文字" width="300">
+  <br>
+  <em>sdhisdhi</em>
+</p>
 
 ![](./figures/method.png)
 
