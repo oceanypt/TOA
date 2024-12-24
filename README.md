@@ -38,6 +38,8 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 
 
 ## Supported Methods
+![](./figures/method.png)
+
 | Method            | Paper                                                                 | Example Code                                                                  |
 |-------------------|----------------------------------------------------------------------|-------------------------------------------------------------------------------|
 | Random Sampling   | [Link](https://arxiv.org/abs/2407.21787)                             | [bash](bash/exp_alpaca_eval/run_generate.api.ensemble.pre_load.sh)            |
@@ -162,6 +164,7 @@ cd bash
 cd exp_alpaca_eval
 bash run_generate.api.mcts.pre_load.sh
 ```
+After generation completion, you will get multiple responses for each input prompt. Each response has a reward, which can be used to do reject sampling or best-of-N sampling. 
 
 
 
@@ -170,7 +173,6 @@ bash run_generate.api.mcts.pre_load.sh
 
 
 
-![](./figures/method.png)
 
 
 
