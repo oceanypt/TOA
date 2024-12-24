@@ -2,8 +2,9 @@
 
 
 <p align="center">
-  <em>Multi-Agent Sampling: for each input question, generate multiple responses from various language models.</em>
+  <!-- <em></em>
   <br>
+   -->
   <img src="./figures/mas.png" alt="" width="400">
 </p>
 
