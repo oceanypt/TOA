@@ -59,9 +59,9 @@ cd bash/launch_large_models
 python start_server.vllm.py path_to_config root_to_save GPU port gpu_utilize
 ```
 
-```bash
-path_to_config: path to the configuration file of the model
-```
+
+- path_to_config: path to the configuration file of the model
+
 
 
 
