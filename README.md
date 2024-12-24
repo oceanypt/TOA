@@ -50,6 +50,8 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 | TOA (ours)        | [Link](https://arxiv.org/abs/2412.17061)                             | [bash](bash/exp_alpaca_eval/run_generate.api.mcts.pre_load.sh)                |
 
 
+Random sampling and PRS are single-agent based methods. 
+
 
 
 ## Project Directory Structure
