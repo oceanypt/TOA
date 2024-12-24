@@ -1,8 +1,8 @@
 {
     "policy_model": {
             "deepseek-v2-chat-0628": {
-                "path_to_model": "/mnt/data/haiye/llms/deepseek-v2-chat-0628",
-                "path_to_chat_template": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/deepseek-v2-chat-0628.jinja",
+                "path_to_model": "",
+                "path_to_chat_template": "../chat_templates/deepseek-v2-chat-0628.jinja",
                 "stop_tokens": "['<｜end▁of▁sentence｜>']",
                 "api_key": "2723hsduj323hsuejsijsd237",
                 "port": 8001,

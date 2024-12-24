@@ -1,6 +1,0 @@
-{
-    "description": "Template for training discriminator",
-    "prompt_input": "Please act as an impartial judge and evaluate the quality of the response provided by an AI assistant to the user question displayed below. Be as objective as possible, and you must rate the response by bad, moderate or good.\n\n[Question]\n{instruction}\n\n[Response]\n{input}\n\nResponse:",
-    "prompt_no_input": "Please act as an impartial judge and evaluate the quality of the response provided by an AI assistant to the user question displayed below. Be as objective as possible, and you must rate the response by bad, moderate or good.\n\n[Question]\n{instruction}\n\n[Response]\n{input}\n\nResponse:",
-    "response_split": "Response:"
-}

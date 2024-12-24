@@ -1,9 +1,9 @@
 {
     "policy_model": {
             "Qwen2-7B": {
-                "path_to_model": "/mnt/data/haiye/llms/Qwen2-7B",
-                "path_to_prompt": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/templates/Qwen2-7B.json",
-                "path_to_chat_template": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/Qwen2-7B.jinja",
+                "path_to_model": "",
+                "path_to_prompt": "../chat_templates/templates/Qwen2-7B.json",
+                "path_to_chat_template": "../chat_templates/Qwen2-7B.jinja",
                 "stop_tokens": "</s>",
                 "api_key": "2323hsuejsijsd237",
                 "port": 8000,

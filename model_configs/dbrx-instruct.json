@@ -1,8 +1,8 @@
 {
     "policy_model": {
             "dbrx-instruct": {
-                "path_to_model": "/mnt/data/haiye/llms/dbrx-instruct/",
-                "path_to_chat_template": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/dbrx-instruct.jinja",
+                "path_to_model": "",
+                "path_to_chat_template": "../chat_templates/dbrx-instruct.jinja",
                 "stop_tokens": "['<|endoftext|>']",
                 "api_key": "2723hsduj323hsuejsijsd237",
                 "port": 8001,

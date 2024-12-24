@@ -1,33 +1,9 @@
-assert() {
-    # "$@" 执行传入的命令，这里是条件判断
-    if ! eval $@; then
-        echo "Assertion failed: $@"
-        exit 1
-    fi
-}
-pip install einops
-pip install accelerate
-export VLLM_USE_MODELSCOPE=False
 ## mode
 mode=ensemble_sample_N_MCTS
 
-# ## I / O params
-# task=data_gen_nmt
-# data_name=dev.zh_to_en.num=100.jsonl  #alpaca_eval.num=805.part_1.num=100.jsonl #alpaca_eval.num=30.jsonl
-# source=zh
-# input=../../data/$task/$data_name
-# mkdir ../../output/$task/
-# save_mode='a'
-# ## I / O params
-# task=wmt22_test
-# data_name=test.zh_to_en.num=200.jsonl #dev.zh_to_en.num=100.jsonl  #alpaca_eval.num=805.part_1.num=100.jsonl #alpaca_eval.num=30.jsonl
-# source=zh
-# input=../../data/$task/$data_name
-# mkdir ../../output/$task/
-# save_mode='a'
 ## I / O params
 task=wmt22_test
-data_name=$2 #test.cs_to_en.num=1448.jsonl  #dev.zh_to_en.num=100.jsonl  #alpaca_eval.num=805.part_1.num=100.jsonl #alpaca_eval.num=30.jsonl
+data_name=test.cs_to_en.num=1448.jsonl 
 source=$(echo $data_name | cut -d '.' -f 2 | cut -d '_' -f 1)
 input=../../data/$task/$data_name
 mkdir ../../output/$task/
@@ -45,7 +21,7 @@ short_config_name=$config_name
 parallel_num=250 #50 ## n_threads in MCTS
 batch_size=1000
 
-for n_samples in $1  ; do
+for n_samples in 32  ; do
 
 ## sampling params
 max_tokens=2048

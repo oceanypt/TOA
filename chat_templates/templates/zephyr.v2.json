@@ -1,6 +1,0 @@
-{
-    "description": "Template used by Vicuna, for all of the versions",
-    "prompt_input": "<|user|>\n{instruction}</s>\n<|assistant|>",
-    "prompt_no_input": "<|user|>\n{instruction}</s>\n<|assistant|>",
-    "response_split": "<|assistant|>"
-}

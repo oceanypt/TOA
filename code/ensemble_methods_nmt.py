@@ -19,7 +19,7 @@ def random_index(lst):
     return ids[random_id]
 
 ## =======>>>> Generation
-def generate_vllm_api(args, prompt, clients, model_configs, max_attempt_time=20, interval=20):
+def generate_vllm_api(args, prompt, clients, model_configs, extraction_template=None, max_attempt_time=20, interval=20):
     def call():
         c_id = random_index(clients)
         client = clients[c_id]
@@ -32,7 +32,7 @@ def generate_vllm_api(args, prompt, clients, model_configs, max_attempt_time=20,
                 messages = [{"role": "system", "content": prompt[0]}, {"role": "user", "content": prompt[1]}]
             else:
                 messages = [{"role": "user", "content": prompt}]
-
+        
             completion = client.chat.completions.create(
                 model=model_config['path_to_model'],
                 messages=messages,
@@ -54,6 +54,8 @@ def generate_vllm_api(args, prompt, clients, model_configs, max_attempt_time=20,
                 "total_tokens": completion.usage.total_tokens
             }
             
+            print (f"\n\n-------->\n{prompt}\n***\n{response['response']}")
+            
         except Exception as e:
             print(f"\n\nError: {e}\nModel:{model_config['path_to_model']}\n\n")
             response = None
@@ -71,13 +73,18 @@ def generate_vllm_api(args, prompt, clients, model_configs, max_attempt_time=20,
 
 ## =======>>>> Ensemble
 def sample_N_thread(args, task_queue, model_names, configs, policy_model_by_name, reward_model, output_queue):
+    with open(args.path_to_translation_template, 'r') as f:
+        translate_template = f.read()
+    
     while True:
         try:
             input_item = task_queue.get(timeout=10)
         except queue.Empty:
-            return 
+            return  # If there are no tasks for an extended period, the thread exits.
         
-        input_prompt, action_names, temp_all_input_prompts = input_item['instruction'], [], []
+        source_lang, action_names, temp_all_input_prompts = input_item[args.source], [], []
+        
+        input_prompt = translate_template.format(source = source_lang)
         
         for model_name in model_names:
             action_names += [ model_name ] * args.n_samples
@@ -92,7 +99,8 @@ def sample_N_thread(args, task_queue, model_names, configs, policy_model_by_name
         
 
         # cal rewards
-        all_rewards = reward_model.cal_rewards( temp_all_input_prompts, temp_all_responses  )
+        print (f"\n\n-----> calculating the rewards...")
+        all_rewards = reward_model.cal_rewards( [source_lang] * (args.n_samples * len(model_names)), temp_all_responses  )
         
         # prepare the output
         input_item['responses'] = temp_all_responses
@@ -119,7 +127,9 @@ def sample_N_thread(args, task_queue, model_names, configs, policy_model_by_name
 ## =======>>>> PRS
 def PRS_thread(args, task_queue, model_names, configs, policy_model_by_name, reward_model, output_queue):
     assert len(model_names) == 1 # make sure there is only one model for generation
-    
+    with open(args.path_to_translation_template, 'r') as f:
+        translate_template = f.read()
+        
     with open(args.path_to_refine_template, 'r') as f:
         refine_template = f.read()
     
@@ -129,28 +139,30 @@ def PRS_thread(args, task_queue, model_names, configs, policy_model_by_name, rew
         except queue.Empty:
             return  
         
-        input_prompt, model_name = input_item['instruction'], model_names[0]
+        source_lang, model_name = input_item[args.source], model_names[0]
         
         width_0 = int(args.n_samples / 2)
         width_1 = args.n_samples - width_0
         
         # 1. layer 0
+        input_prompt = translate_template.format(source = source_lang)
+        
         layer_0_results = [
             generate_vllm_api(args, input_prompt, policy_model_by_name[model_name], configs[model_name]) for _ in range(width_0)
         ]
         
         
-        layer_0_rewards = reward_model.cal_rewards( [input_prompt] * len(layer_0_results), [ temp['response'] for temp in layer_0_results] )
+        layer_0_rewards = reward_model.cal_rewards( [source_lang] * len(layer_0_results), [ temp['response'] for temp in layer_0_results] )
         
         best_response_in_layer_0 = layer_0_results[np.argmax(layer_0_rewards)]['response']
         
         # 2. layer 1
         ## pack the input prompt
-        packed_input_prompt = refine_template.format(question = input_prompt, answer = best_response_in_layer_0)
+        packed_input_prompt = refine_template.format(source = source_lang, translation = best_response_in_layer_0)
         layer_1_results = [
             generate_vllm_api(args, packed_input_prompt, policy_model_by_name[model_name], configs[model_name]) for _ in range(width_1)
         ]
-        layer_1_rewards = reward_model.cal_rewards( [ input_prompt ] * len(layer_1_results), [ temp['response'] for temp in layer_1_results ] )
+        layer_1_rewards = reward_model.cal_rewards( [ source_lang ] * len(layer_1_results), [ temp['response'] for temp in layer_1_results ] )
         
         # 3. combine the results
         all_responses = [ temp['response'] for temp in layer_0_results ] + [ temp['response'] for temp in layer_1_results ]
@@ -177,6 +189,9 @@ def PRS_thread(args, task_queue, model_names, configs, policy_model_by_name, rew
         task_queue.task_done()
 
 def Seq_thread(args, task_queue, model_names, configs, policy_model_by_name, reward_model, output_queue):
+    with open(args.path_to_translation_template, 'r') as f:
+        translate_template = f.read()
+        
     with open(args.path_to_refine_template, 'r') as f:
         refine_template = f.read()
     
@@ -186,8 +201,7 @@ def Seq_thread(args, task_queue, model_names, configs, policy_model_by_name, rew
         except queue.Empty:
             return  
 
-        input_prompt = input_item['instruction']
-        print (f"\n\n{input_prompt}\n********************")
+        source_lang = input_item[args.source]
         
         responses, action_names = [], []
         model_ids = list(range(len(model_names)))
@@ -200,10 +214,10 @@ def Seq_thread(args, task_queue, model_names, configs, policy_model_by_name, rew
                 if gen_count >= args.n_samples * len(model_names):
                     break
                 
-                temp_input_prompt = input_prompt
+                temp_input_prompt = translate_template.format(source = source_lang)  #input_prompt
                 
                 if id_iter > 0:
-                    temp_input_prompt = refine_template.format(question = input_prompt, answer = responses[-1]['response'] )
+                    temp_input_prompt = refine_template.format(source = source_lang, translation = responses[-1]['response'] )
                 
                 model_name = model_names[ model_ids[id_iter]]
                 action_names.append( f"{model_name}.round_{round_id}_iter_{id_iter}" )
@@ -215,7 +229,7 @@ def Seq_thread(args, task_queue, model_names, configs, policy_model_by_name, rew
                 gen_count += 1
 
         input_item['responses'] = [ temp['response'] for temp in responses ]
-        rewards = reward_model.cal_rewards([ input_prompt ] * len(input_item['responses']), input_item['responses'])
+        rewards = reward_model.cal_rewards([ source_lang ] * len(input_item['responses']), input_item['responses'])
         input_item['rewards'] = rewards
 
         input_item['actions'] = action_names
@@ -234,22 +248,25 @@ def Seq_thread(args, task_queue, model_names, configs, policy_model_by_name, rew
 
 
 ## =======>>>> MoA
-def aggregate_responses(args, aggregator_prompt, responses):
+def aggregate_responses(args, responses):
     if args.num_aggregation < len(responses):
         random.shuffle(responses)
     packed_response = ''
     for i, response in enumerate(responses[:args.num_aggregation]):
-        packed_response += f'## Response {i+1}:\n{response}\n\n'
+        packed_response += f'## Translation {i+1}:\n{response}\n\n'
     
-    packed_ = aggregator_prompt + "\n" + packed_response.strip()
+    packed_ = packed_response.strip()
     
     print (f'{packed_}\n\n---------------------')
     
     return packed_
 
-def MoA_thread(args, task_queue, model_names, configs, policy_model_by_name, reward_model, output_queue):    
-    with open(args.path_to_aggregator_prompt, 'r') as f:
-        aggregator_prompt = f.read().strip()
+def MoA_thread(args, task_queue, model_names, configs, policy_model_by_name, reward_model, output_queue):
+    with open(args.path_to_translation_template, 'r') as f:
+        translate_template = f.read()
+        
+    with open(args.path_to_refine_template, 'r') as f:
+        refine_template = f.read()
     
     while True:
         try:
@@ -257,8 +274,8 @@ def MoA_thread(args, task_queue, model_names, configs, policy_model_by_name, rew
         except queue.Empty:
             return  
 
-        input_prompt = input_item['instruction']
-        print (f"\n\n{input_prompt}\n********************")
+        source_lang = input_item[args.source]
+
         
         responses_by_model = {model_name: [] for model_name in model_names}
         
@@ -268,12 +285,12 @@ def MoA_thread(args, task_queue, model_names, configs, policy_model_by_name, rew
                 if gen_count >= args.n_samples:
                     break
                 
-                temp_input_prompt = input_prompt
+                temp_input_prompt = translate_template.format(source = source_lang)  #input_prompt
                 
                 if id_iter > 0:
                     # aggregate the responses
                     c_responses = [responses_by_model[model_name][-1]['response'] for model_name in model_names]
-                    temp_input_prompt = (aggregate_responses(args, aggregator_prompt, c_responses), input_prompt)
+                    temp_input_prompt = refine_template.format(source = source_lang, translation = aggregate_responses(args, c_responses) )
                 
                 temp_all_responses = [
                     generate_vllm_api(args, temp_input_prompt, policy_model_by_name[model_name], configs[model_name]) for model_name in model_names
@@ -287,7 +304,7 @@ def MoA_thread(args, task_queue, model_names, configs, policy_model_by_name, rew
 
         input_item['responses'] = {model_name: [ responses_by_model[model_name][round_id]['response'] for round_id in range(args.n_samples) ] for model_name in model_names}
 
-    
+       
 
         temp_responses = []
         temp_rewards = []
@@ -303,7 +320,7 @@ def MoA_thread(args, task_queue, model_names, configs, policy_model_by_name, rew
                             model_name + '_' + str(id_iter)
                         )
                     gen_count += 1   
-            temp_rewards += reward_model.cal_rewards([input_item['instruction']] * len(c_responses), c_responses)
+            temp_rewards += reward_model.cal_rewards([source_lang] * len(c_responses), c_responses)
         
         temp_n_prompt_tokens = []
         temp_n_completion_tokens = []
@@ -414,7 +431,7 @@ class Node():
         assert self.node_type == '__model__'
 
         root_node = self.get_root_node()
-        expanded_width = self.sum_children_at_layer(root_node, self.layer_id)  
+        expanded_width = self.sum_children_at_layer(root_node, self.layer_id)  #self.cal_child_num_of_layer(self, root_node, self.layer_id)
         return expanded_width
     
     def get_root_node(self):
@@ -548,7 +565,9 @@ def MCTS_Backup(node, reward):
         node = node.parent
 
 def MCTS_thread(args, task_queue, model_names, configs, policy_model_by_name, reward_model, output_queue):
-    # read the refinement template
+    with open(args.path_to_translation_template, 'r') as f:
+        translate_template = f.read()
+     
     with open(args.path_to_refine_template, 'r') as f:
         refine_template = f.read()   
     
@@ -563,8 +582,8 @@ def MCTS_thread(args, task_queue, model_names, configs, policy_model_by_name, re
         except queue.Empty:
             return  
     
-        input_prompt = input_item['instruction']
-        print (f"\n\n{input_prompt}\n********************")
+        source_lang = input_item[args.source]
+        
         
         ## build the trees
         tree = Node(args = args,
@@ -573,7 +592,7 @@ def MCTS_thread(args, task_queue, model_names, configs, policy_model_by_name, re
                    response = None,
                    parent = None,
                    model_names = model_names,
-                   input_prompt = input_prompt,
+                   input_prompt = source_lang,
                    input_response = None,
                    node_type = '__root__')
         
@@ -591,10 +610,9 @@ def MCTS_thread(args, task_queue, model_names, configs, policy_model_by_name, re
         
             ## 2. pack the input prompts
             if c_node.input_response is None:
-                packed_input_prompt = input_prompt
+                packed_input_prompt = translate_template.format(source = source_lang)  #input_prompt
             else:
-                packed_input_prompt = refine_template.format(question = c_node.input_prompt, answer = c_node.input_response)
-
+                packed_input_prompt = refine_template.format(source = c_node.input_prompt, translation = c_node.input_response)
 
                 
             ## 3. generate responses
@@ -603,7 +621,7 @@ def MCTS_thread(args, task_queue, model_names, configs, policy_model_by_name, re
             
             
             ## 4. calculate rewards for the responses
-            reward = reward_model.cal_rewards([input_prompt], [response['response']])[0]
+            reward = reward_model.cal_rewards([source_lang], [response['response']])[0]
             print (f"\n\n\n-------------> Reward: {reward}\n\n\n")
         
             ## 4.1 normalize the rewards

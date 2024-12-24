@@ -1,6 +1,0 @@
-{
-    "description": "Template with self feedback. The input is the first round output",
-    "prompt_input": "[Start of the question]\n{instruction}\n\n[End of the question]\n\nPlease improve your first round answer, and try to improve the helpfulness, relevance, correctness and level of detail of your response. Avoid any factual errors and hallucinations.\n\n[Start of the first round answer]\n{input}\n\n[End of the first round answer]\n\n### Response:",
-    "prompt_no_input": "{instruction}\n\n### Response:",
-    "response_split": "### Response:"    
-}

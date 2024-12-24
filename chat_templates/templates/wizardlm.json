@@ -1,6 +1,0 @@
-{
-    "description": "Template used by WizardLM-7B.",
-    "prompt_input": "{instruction}\n\n### Response:",
-    "prompt_no_input": "{instruction}\n\n### Response:",
-    "response_split": "### Response:"    
-}

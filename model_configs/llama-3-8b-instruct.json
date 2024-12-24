@@ -1,8 +1,8 @@
 {
     "policy_model": {
             "llama-3-8b-instruct": {
-                "path_to_model": "/mnt/2050data/public/ckpt/haiye/llms/Meta-Llama-3-8B-Instruct/models--meta-llama--Meta-Llama-3-8B-Instruct/snapshots/e1945c40cd546c78e41f1151f4db032b271faeaa",
-                "path_to_chat_template": "/mnt/2050data/haiye/ensemble_inference/ensemble_inference/chat_templates/llama-3.1-instruct.jinja",
+                "path_to_model": "",
+                "path_to_chat_template": "../chat_templates/llama-3.1-instruct.jinja",
                 "stop_tokens": "['<|eot_id|>']",
                 "api_key": "2723hsdhuj323hsuejsijsd237",
                 "port": 8000,

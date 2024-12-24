@@ -1,6 +1,0 @@
-{
-    "description": "",
-    "prompt_input": "<s>{instruction}[/INST]",
-    "prompt_no_input": "<s>{instruction}[/INST]",
-    "response_split": "[/INST]"
-}

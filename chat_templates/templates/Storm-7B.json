@@ -1,6 +1,0 @@
-{
-    "description": "",
-    "prompt_input": "GPT4 Correct User: {instruction}<|end_of_turn|>GPT4 Correct Assistant:",
-    "prompt_no_input": "GPT4 Correct User: {instruction}<|end_of_turn|>GPT4 Correct Assistant:",
-    "response_split": "[/INST]"
-}

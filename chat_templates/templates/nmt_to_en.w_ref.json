@@ -1,6 +1,0 @@
-{
-    "description": "Template used by nmt, the target is english",
-    "prompt_input": "You are a great translator. Based on the reference translation, you have to translate the following input sentence into English. You need to propose a better translation than the reference.\n\n### Input:\n{instruction}\n\n### Reference:\n{input}\n\n### Response:",
-    "prompt_no_input": "You are a great translator. Based on the reference translation, you have to translate the following input sentence into English. You need to propose a better translation than the reference.\n\n### Input:\n{instruction}\n\n### Reference:\n{input}\n\n### Response:",
-    "response_split": "### Response:"
-}

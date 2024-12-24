@@ -1,8 +1,8 @@
 {
     "policy_model": {
             "Mistral-7B-Instruct-v0.3": {
-                "path_to_model": "/mnt/2050data/public/ckpt/haiye/llms/Mistral-7B-Instruct-v0.3/models--mistralai--Mistral-7B-Instruct-v0.3/snapshots/e0bc86c23ce5aae1db576c8cca6f06f1f73af2db",
-                "path_to_chat_template": "/mnt/2050data/haiye/ensemble_inference/ensemble_inference/chat_templates/mistral-large-instruct-2407.jinja",
+                "path_to_model": "",
+                "path_to_chat_template": "../chat_templates/mistral-large-instruct-2407.jinja",
                 "stop_tokens": "['</s>']",
                 "api_key": "sdhwehisd823nwed23723",
                 "port": 8000,

@@ -1,8 +1,8 @@
 {
     "policy_model": {
             "wizardlm-2-8x22b": {
-                "path_to_model": "/mnt/2050data/public/ckpt/haiye/llms/wizardlm-2-8x22b",
-                "path_to_chat_template": "/mnt/2050data/haiye/ensemble_inference/ensemble_inference/chat_templates/wizardlm-2-8x22b.jinja",
+                "path_to_model": "",
+                "path_to_chat_template": "../chat_templates/wizardlm-2-8x22b.jinja",
                 "stop_tokens": "['</s>']",
                 "api_key": "udldpqewhdsi0237",
                 "port": 8003,

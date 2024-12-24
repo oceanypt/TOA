@@ -1,24 +1,24 @@
 import sys
 import json
 import numpy as np
-sys.path.append('../../code/')
+sys.path.append('../code/')
 from flops import *
 import os
 from tqdm import tqdm
 
 models_of_flops = [
-    '../../model_configs/llama-3.1-70b-instruct.json',
-    '../../model_configs/Mixtral-8x22B-Instruct-v0.1.json',
-    '../../model_configs/mistral-large-instruct-2407.json',
-    '../../model_configs/Qwen2-72B-Instruct.json',
-    '../../model_configs/wizardlm-2-8x22b.json',
-    '../../model_configs/llama-3.1-8b-instruct.json',
-    '../../model_configs/Qwen2-7B-Instruct.json',
-    '../../model_configs/Yi-1.5-9B-Chat-16K.json',
-    '../../model_configs/Mistral-7B-Instruct-v0.2.json',
-    '../../model_configs/Mistral-7B-Instruct-v0.3.json',
-    '/mnt/2050data/haiye/ensemble_inference/ensemble_inference//model_configs/deepseek-math-7b-rl.json',
-    '/mnt/2050data/haiye/ensemble_inference/ensemble_inference//model_configs/gemma-2-9b-it.json'
+    '../model_configs/llama-3.1-70b-instruct.json',
+    '../model_configs/Mixtral-8x22B-Instruct-v0.1.json',
+    '../model_configs/mistral-large-instruct-2407.json',
+    '../model_configs/Qwen2-72B-Instruct.json',
+    '../model_configs/wizardlm-2-8x22b.json',
+    '../model_configs/llama-3.1-8b-instruct.json',
+    '../model_configs/Qwen2-7B-Instruct.json',
+    '../model_configs/Yi-1.5-9B-Chat-16K.json',
+    '../model_configs/Mistral-7B-Instruct-v0.2.json',
+    '../model_configs/Mistral-7B-Instruct-v0.3.json',
+    '../model_configs/deepseek-math-7b-rl.json',
+    '../model_configs/gemma-2-9b-it.json'
 ]
 model_flops_per_token = dict()
 model_names = []

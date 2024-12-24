@@ -1,8 +1,8 @@
 {
     "policy_model": {
             "Yi-1.5-34B-Chat-16K": {
-                "path_to_model": "/mnt/data/haiye/llms/Yi-1.5-34B-Chat-16K",
-                "path_to_chat_template": "/mnt/data/haiye/ensemble_inference/ensemble_inference/chat_templates/Yi-1.5-34B-chat-16k.jinja",
+                "path_to_model": "",
+                "path_to_chat_template": "../chat_templates/Yi-1.5-34B-chat-16k.jinja",
                 "stop_tokens": "['<|im_end|>']",
                 "api_key": "27223hisdihisd923jhi82378k3hsejsijsd237",
                 "port": 8003,

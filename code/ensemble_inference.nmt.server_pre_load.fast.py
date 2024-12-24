@@ -4,7 +4,7 @@ from tqdm import tqdm
 import json
 import threading
 import numpy as np
-from reward import UltraRM, ArmoRM, Shepherd_MATH_PRM, InternRM, Qwen25_Math_RM, EmptyRM
+from reward import XCOMT_API
 from openai import OpenAI
 import random
 import sys
@@ -13,7 +13,7 @@ import sys
 import queue
 import openai
 import time
-from ensemble_methods import *
+from ensemble_methods_nmt import *
 
 
 def list_files_and_paths(directory):
@@ -46,21 +46,8 @@ def writer(output_queue, file_name):
             # Mark the task as completed
             output_queue.task_done()
 
-def load_reward_model(config):
-    gpu_ids = config['reward_model']['GPU']
-    if config['reward_model']['name'] == 'UltraRM':
-        return UltraRM(config['reward_model']['path'], gpu_ids)
-    elif config['reward_model']['name'] == 'ArmoRM':
-        return ArmoRM(config['reward_model']['path'], gpu_ids)
-    elif config['reward_model']['name'] == 'Shepherd_MATH_PRM':
-        return Shepherd_MATH_PRM(config['reward_model']['path'], gpu_ids)
-    elif config['reward_model']['name'] == 'InternRM':
-        return InternRM(config['reward_model']['path'], gpu_ids)
-    elif config['reward_model']['name'] == 'Qwen25_Math_RM':
-        return Qwen25_Math_RM(config['reward_model']['path'], gpu_ids)
-    else:
-        return EmptyRM()
-    return None
+
+
 
 def load_models(args):
     # return: config, clients_by_name, reward_model
@@ -93,12 +80,18 @@ def load_models(args):
             policy_model_by_name[model_name].append(c_client)
 
     ## load the reward model
-    with open(args.path_reward_config, 'r') as f:
-        reward_config = json.load(f)
+    path_to_reward_configs = list_files_and_paths(args.root_reward_configs)
+    api_urls = []
+    for path in path_to_reward_configs:
+        with open(path, 'r') as f:
+            reward_config = json.load(f)
+            api_url = f"http://{reward_config['host']}:{reward_config['port']}/predict/"
+            api_urls.append(api_url)
     
+    reward_model = XCOMT_API(api_urls)
     
     # Load reward model (assuming this does not need threading for simplicity, but could be threaded similarly)
-    reward_model = load_reward_model(reward_config)
+    #reward_model = load_reward_model(reward_config)
     
     print (f"\n\n-------> Loaded model configs:\n{configs}\n\n")
     
@@ -141,9 +134,10 @@ def ensemble_sampling(args, all_input_items, model_names, configs, policy_model_
     print (f'\n\nStart the job ...')
     threads = thread_manager(args, task_queue, policy_model_by_name, model_names, configs, reward_model,output_queue, args.parallel_num)
     
-
+    
     # Wait for all tasks to complete
     task_queue.join()
+
     # Wait for all threads to finish naturally
     for thread in threads:
         thread.join()
@@ -165,8 +159,8 @@ def main(
     parser.add_argument('--output', type=str, required=True, help="path to save data, in .jsonl")
     parser.add_argument('--save_mode', type=str, required=False, default='w', choices=['w', 'a'], help="the mode for saving the data")
     parser.add_argument('--root_configs', type=str, required=True, help="path to the dir of model configs")
-    parser.add_argument('--path_reward_config', type=str, required=True, help="path to the reward model")
-
+    parser.add_argument('--root_reward_configs', type=str, required=True, help="path to the dir of reward model configs")
+    parser.add_argument('--path_reward_config', type=str, required=False, help="path to the reward model")
 
     ## model params
     parser.add_argument('--path_to_config', type=str, required=False, help="path to config file for models")
@@ -193,9 +187,13 @@ def main(
     parser.add_argument('--path_to_aggregator_prompt', type=str, required=False, help="path the aggregator prompt")
     parser.add_argument('--num_aggregation', type=int, required=False, default=1, help="the num of responses for aggregation")
 
-
     ## refinement
+    parser.add_argument('--path_to_translation_template', type=str, required=False, help="path to the template of translation")
     parser.add_argument('--path_to_refine_template', type=str, required=False, help="path to the template of refinement")
+
+    ## NMT
+    parser.add_argument('--source', type=str, required=True, help="the source language for translation")
+
 
     args = parser.parse_args()
     ## 0. print the vars

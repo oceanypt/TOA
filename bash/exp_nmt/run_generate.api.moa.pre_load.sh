@@ -1,17 +1,10 @@
 ## mode
 mode=ensemble_MoA
 
-# ## I / O params
-# task=data_gen_nmt
-# data_name=dev.zh_to_en.num=100.jsonl  #alpaca_eval.num=805.part_1.num=100.jsonl #alpaca_eval.num=30.jsonl
-# source=zh
-# input=../../data/$task/$data_name
-# mkdir ../../output/$task/
-# save_mode='a'
 
 ## I / O params
 task=wmt22_test
-data_name=$2 #test.zh_to_en.num=200.jsonl #dev.zh_to_en.num=100.jsonl  #alpaca_eval.num=805.part_1.num=100.jsonl #alpaca_eval.num=30.jsonl
+data_name=test.zh_to_en.num=200.jsonl 
 source=$(echo $data_name | cut -d '.' -f 2 | cut -d '_' -f 1) #zh
 input=../../data/$task/$data_name
 mkdir ../../output/$task/
@@ -28,9 +21,8 @@ short_config_name=$config_name
 
 
 ## generation params
-parallel_num=500
-save_mode='a'
 batch_size=1000
+parallel_num=500
 
 n_iter=3
 num_aggregation=${model_num}
@@ -42,11 +34,10 @@ temperature=0.7
 top_p=1
 
 path_to_translation_template=../../prompts/translation.txt
-path_to_refine_template=../../prompts/aggregator.nmt.v2.txt #refinement_wo_feedback.nmt.v1.txt
+path_to_refine_template=../../prompts/aggregator.nmt.v2.txt
 
 output=../../output/$task/${data_name}.source=${source}.mode=${mode}.model_num=${model_num}.config=${short_config_name}.n_samples=${n_samples}.n_iter=${n_iter}.num_agg=${num_aggregation}.temp=${temperature}.top_p=${top_p}.agg=v2.jsonl
 
-#CUDA_VISIBLE_DEVICES=$GPU 
 python ../../code/ensemble_inference.nmt.server_pre_load.fast.py --mode $mode \
                                      --input $input \
                                      --output $output \

@@ -23,7 +23,6 @@ import subprocess
 from math_parser import *
 
 
-
 class LlamaRewardModel(PreTrainedModel):
     config_class = LlamaConfig
     def __init__(self, config):
@@ -103,8 +102,6 @@ class UltraRM:
 
 class ArmoRM:
     def __init__(self, model_path, gpu_id):
-        #self.model = AutoModelForSequenceClassification.from_pretrained(model_path, device_map='auto', 
-        #                       trust_remote_code=True, torch_dtype=torch.bfloat16)
         self.model = AutoModelForSequenceClassification.from_pretrained(model_path, 
                                trust_remote_code=True, torch_dtype=torch.bfloat16)
         self.tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=True)
@@ -135,54 +132,6 @@ class ArmoRM:
         del self.tokenizer
         torch.cuda.empty_cache()
         gc.collect()
-
-
-# class ArmoRM:
-#     def __init__(self, model_path, gpu_id):
-#         #self.model = AutoModelForSequenceClassification.from_pretrained(model_path, device_map='auto', 
-#         #                       trust_remote_code=True, torch_dtype=torch.bfloat16)
-#         self.model = AutoModelForSequenceClassification.from_pretrained(model_path, 
-#                                trust_remote_code=True, torch_dtype=torch.bfloat16)
-#         self.tokenizer = AutoTokenizer.from_pretrained(model_path, use_fast=True)
-        
-        
-#         device = f'cuda:{gpu_id}'
-#         self.model.to(device)
-#         self.device = device
-        
-#     def cal_rewards(self, instructions, responses):
-#         all_rewards = []
-#         for instruction, response in zip(instructions, responses):
-#             try:
-#                 messages = [{"role": "user", "content": instruction},
-#                         {"role": "assistant", "content": response}]
-#                 input_ids = self.tokenizer.apply_chat_template(messages, return_tensors="pt").to(self.device)
-#                 """
-#                 attributes = ['helpsteer-helpfulness','helpsteer-correctness','helpsteer-coherence',
-#                     'helpsteer-complexity','helpsteer-verbosity','ultrafeedback-overall_score',
-#                     'ultrafeedback-instruction_following', 'ultrafeedback-truthfulness',
-#                     'ultrafeedback-honesty','ultrafeedback-helpfulness','beavertails-is_safe',
-#                     'prometheus-score','argilla-overall_quality','argilla-judge_lm','code-complexity',
-#                     'code-style','code-explanation','code-instruction-following','code-readability']
-#                 """
-                
-#                 with torch.no_grad():
-#                     output = self.model(input_ids)
-#                     #preference_score = output.score.cpu().float().item()
-#                     multi_obj_rewards = output.rewards.cpu().float().tolist()[0]
-#                     #print(multi_obj_rewards)
-#                     preference_score = multi_obj_rewards[5] #ultrafeedback-overall_score
-#                     all_rewards.append(preference_score)
-#             except Exception as e:
-#                 print(f"\n\n\n\n---> In reward model: {e}\n\n\n\n")
-#                 all_rewards.append(0.0)
-        
-#         return all_rewards
-#     def clear_cache(self):
-#         del self.model
-#         del self.tokenizer
-#         torch.cuda.empty_cache()
-#         gc.collect()
 
 
 
@@ -291,19 +240,6 @@ class InternRM:
 
 
 class XCOMT_API:
-    """
-    def send_request(data, result_queue):
-    response = requests.post(API_URL, headers=headers, json=data)
-    result = response.json()  # 获取并解析响应
-    print (f"\n\n{result}")
-    result_queue.put(result)  # 将结果放入队列
-    API_URL = "http://127.0.0.1:8000/predict/"
-    API_TOKEN = "YOUR_API_KEY"
-    headers = {
-    "Authorization": f"Bearer {API_TOKEN}",
-    "Content-Type": "application/json",
-    }
-    """
     def __init__(self, api_urls, api_token=''):
         self.api_urls = api_urls
         #self.api_token = api_token
@@ -311,34 +247,6 @@ class XCOMT_API:
             "Authorization": f"Bearer {api_token}",
             "Content-Type": "application/json",
         }
-
-    # def cal_rewards(self, srcs, nmts):
-    #     api_url_ids = list(range(len(self.api_urls)))
-        
-    #     results = []
-    #     for src, nmt in zip(srcs, nmts):
-    #         try:
-    #             data = {
-    #                 "inputs": {
-    #                 "batch_size": 1,
-    #                 "workers": 2,
-    #                 "data": [
-    #                     {"src": src,
-    #                     "mt": nmt}
-    #                     ]
-    #                 }
-    #             }
-    #             random.shuffle(api_url_ids)
-    #             response = requests.post(self.api_urls[api_url_ids[-1]], headers=self.headers, json=data)
-    #             result = response.json()  # 获取并解析响应
-    #             print (result)
-            
-    #             results.append(result['scores'][0])
-    #         except Exception as e:
-    #             print(f"{e}")
-    #             results.append(0.0)
-            
-    #     return results
     
     def cal_rewards(self, srcs, nmts):
         api_url_ids = list(range(len(self.api_urls)))
@@ -365,153 +273,9 @@ class XCOMT_API:
             print(f"{e}")
             return [0.0] * len(srcs)
             
-        
-
-
-class GSM:
-    def __init__(self):
-        self.name = 'gsm'
-        self.pos = 0.8
-        self.neg = 0.1
-        
-    def cal_rewards(self, instructions, responses, gold_answers):
-        all_rewards = []
-        for instruction, response, gold_answer in zip(instructions, responses, gold_answers):
-            try:
-                pred_answer = response.split('\n')[-1].replace(',','')
-                pred_answer = float(re.findall(r'\d+\.\d+|\d+', pred_answer)[0])
-                
-                gold_answer = float(gold_answer)
-                
-                if gold_answer == pred_answer:
-                    all_rewards.append(self.pos)
-                else:
-                    all_rewards.append(self.neg)
-        
-            except Exception as e:
-                print(f"\n\n\n\n---> In reward model: {e}\n\n\n\n")
-                all_rewards.append(0.0)
-        
-        return all_rewards
     
-    
-class MATH:
-    def __init__(self):
-        self.name = 'MATH'
-        self.pos = 0.8
-        self.neg = 0.1
         
-    def cal_rewards(self, instructions, responses, gold_answers):
-        all_rewards = []
-        for instruction, response, gold_answer in zip(instructions, responses, gold_answers):
-            try:
-                pred_answer = extract_answer(response, "math", use_last_number=True)
-                gold_answer = extract_gold_answer(gold_answer)
-                
-                if gold_answer == pred_answer:
-                    all_rewards.append(self.pos)
-                else:
-                    all_rewards.append(self.neg)
-        
-            except Exception as e:
-                print(f"\n\n\n\n---> In reward model: {e}\n\n\n\n")
-                all_rewards.append(0.0)
-        
-        return all_rewards
-    
-    
-# class CodeContest:
-#     def __init__(self):
-#         pass
-#     def extract_python_code(self, text):
-#         # 使用正则表达式找到所有的Python代码块
-#         pattern = r'```python(.*?)```'
-#         # re.DOTALL使得'.'可以匹配包括换行符在内的任意字符
-#         code_blocks = re.findall(pattern, text, re.DOTALL)
-#         return code_blocks
-        
-#     def verify(self, response, gold_answer):
-#         # 1. extract code
-#         code = self.extract_python_code(response)[0]
-        
-#         # 2. verify the code
-#         inputs = gold_answer['input']
-#         outputs = gold_answer['output']
-        
-#         for input_, output in zip(inputs, outputs):
-#             result = subprocess.run(['python', '-c', code], input=input_, text=True, capture_output=True, timeout=15)
-#             result = result.stdout.strip()
-#             if result != output.strip():
-#                 return False
-            
-#         print(f"===> Code:\n{code}\n===> Result: {result}")
-#         return True
-        
-    
-#     def cal_rewards(self, responses, gold_answers):
-#         all_rewards = []
-#         for response, gold_answer in zip(responses, gold_answers):
-#             try:
-#                 if self.verify(response, gold_answer):
-#                     all_rewards.append(0.8)
-#                 else:
-#                     all_rewards.append(0.1)
-#             except Exception as e:
-#                 print(f"{e}")
-#                 all_rewards.append(0.0)
-            
-#         return all_rewards
-        
-        
-
-class CodeContest:
-    def __init__(self):
-        pass
-    def extract_python_code(self, text):
-        # 使用正则表达式找到所有的Python代码块
-        pattern = r'```python(.*?)```'
-        # re.DOTALL使得'.'可以匹配包括换行符在内的任意字符
-        code_blocks = re.findall(pattern, text, re.DOTALL)
-        return code_blocks
-        
-    def verify(self, response, gold_answer):
-        # 1. extract code
-        code = self.extract_python_code(response)[0]
-        
-        # 2. verify the code
-        inputs = gold_answer['input']
-        outputs = gold_answer['output']
-        
-        final_result = []
-        
-        
-        for input_, output in zip(inputs, outputs):
-            result = subprocess.run(['python', '-c', code], input=input_, text=True, capture_output=True, timeout=15)
-            result = result.stdout.strip()
-            if result != output.strip():
-                #return False
-                final_result.append(0.05)
-            else:
-                final_result.append(0.4)
-            
-        #print(f"===> Code:\n{code}\n===> Result: {result}")
-        return np.mean(final_result)
-        
-    
-    def cal_rewards(self, responses, gold_answers):
-        all_rewards = []
-        for response, gold_answer in zip(responses, gold_answers):
-            try:
-                all_rewards.append(
-                    self.verify(response, gold_answer)
-                )
-            except Exception as e:
-                print(f"{e}")
-                all_rewards.append(0.0)
-            
-        return all_rewards
-        
-        
+     
 
 
 class Qwen25_Math_RM:

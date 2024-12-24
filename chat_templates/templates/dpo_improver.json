@@ -1,6 +1,0 @@
-{
-    "description": "Template used by DPO, Improver",
-    "prompt_input": "You are an AI assistant tasked with refining and enhancing the response initially provided by another AI. Here is the question and the original AI's answer:\n\nQuestion: {instruction}\n\nOriginal AI's Answer: {input}\n\nImproved Answer:",
-    "prompt_no_input": "You are an AI assistant tasked with refining and enhancing the response initially provided by another AI. Here is the question and the original AI's answer:\n\nQuestion: {instruction}\n\nOriginal AI's Answer: {input}\n\nImproved Answer:",
-    "response_split": "Improved Answer:"
-}
