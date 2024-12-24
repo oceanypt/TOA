@@ -185,8 +185,18 @@ After generation completion, you will get multiple responses for each input prom
 
 
 
-
-
+## Citation
+```bibtex
+@misc{ye2024multiagentsamplingscalinginference,
+      title={Multi-Agent Sampling: Scaling Inference Compute for Data Synthesis with Tree Search-Based Agentic Collaboration}, 
+      author={Hai Ye and Mingbao Lin and Hwee Tou Ng and Shuicheng Yan},
+      year={2024},
+      eprint={2412.17061},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2412.17061}, 
+}
+```
 
 
 
