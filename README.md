@@ -54,6 +54,8 @@ Random sampling and PRS are single-agent based methods.
 
 
 ## Synthesized Alignment Data
+
+We synthesized data from the following four language models and the reward model. The input prompts are taken from [Ultrafeedback](princeton-nlp/llama3-ultrafeedback-armorm). For each prompt, we sample 160 responses. We keep the best response with the highest reward to build SFT data. For DPO training, we select the ranked 30th response as the rejected sample and best one as the chosen sample. 
 |Models                                                                                      |Reward Model                                                                                 |SFT Data                                                                                               |DPO Data                                                                                     |
 |--------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
 | [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)           | [ArmoRM-Llama3-8B-v0.1](https://huggingface.co/RLHFlow/ArmoRM-Llama3-8B-v0.1)              | [Rand-Qwen2-7B-Inst](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-Rand-qwen2-7b-inst)             | [TOA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-DPO-TOA-model-num-4)                      |
@@ -66,10 +68,7 @@ Random sampling and PRS are single-agent based methods.
 |                                                                                            |                                                                                             | [TOA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-TOA-model-num-4)                               |                                                                                                            |
 
 
-
-
-
-## Project Directory Structure
+<!-- ## Project Directory Structure
 
 - **README.md**
   - Provides an introduction to the project, usage instructions, and documentation.
@@ -100,7 +99,7 @@ Random sampling and PRS are single-agent based methods.
 
 - **useful_code/**
   - Holds utility scripts or helpful tools to support the project, such as debugging or preprocessing tools.
-
+ -->
 
 
 
