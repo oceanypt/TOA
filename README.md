@@ -72,6 +72,28 @@ python start_server.vllm.py path_to_config root_to_save GPU port gpu_utilize
     }
 }
 ```
+- root_to_save: path to save the server configuration, which is in JSON format and looks like:
+```bash
+
+    "model_name": "llama-3.1-8b-instruct",
+    "config": {
+        "path_to_model": "",
+        "path_to_chat_template": "../chat_templates/llama-3.1-instruct.jinja",
+        "stop_tokens": "['<|eot_id|>']",
+        "api_key": "abc123",
+        "port": 8000,
+        "host": your local machine address,
+        "GPU": "0",
+        "gpu_utilize": 0.9
+    }
+}
+```
+- GPU: gpu ids, such as "0", "0,1", "0,1,2,3"
+- port: 8000, 8001, etc
+- gpu_utilize: how much gpu memory to use, such as 0.9, 0.8
+
+You can start the server for different models, just make sure to save all the server configuration into one same folder, that is [root_to_save](). 
+
 
 
 
