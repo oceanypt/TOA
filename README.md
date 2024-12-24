@@ -4,8 +4,12 @@
   <img src="./figures/mas.png" alt="" width="400">
   <br>
   <a href="https://arxiv.org/pdf/2412.17061" style="text-decoration: none;">
-    <img src="https://img.shields.io/badge/arXiv-paper-b31b1b.svg" alt="arXiv Paper"><img src="https://img.shields.io/badge/License-Apache_2.0-green.svg" alt="License">
+    <img src="https://img.shields.io/badge/arXiv-paper-b31b1b.svg" alt="arXiv Paper">
   </a>
+  <a href="https://github.com/oceanypt/TOA-Lite/tree/main?tab=Apache-2.0-1-ov-file" style="text-decoration: none;">
+    <img src="https://img.shields.io/badge/License-Apache_2.0-green.svg" alt="License">
+  </a>
+
 </div>
 
 
