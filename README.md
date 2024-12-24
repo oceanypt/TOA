@@ -60,9 +60,18 @@ python start_server.vllm.py path_to_config root_to_save GPU port gpu_utilize
 ```
 
 
-- path_to_config: path to the configuration file of the model
-
-
+- path_to_config: path to the configuration file of the model, which is in JSON format and looks like
+```bash
+{
+    "policy_model": {
+            "llama-3.1-8b-instruct": {
+                "path_to_model": "",
+                "path_to_chat_template": "../chat_templates/llama-3.1-instruct.jinja",
+                "stop_tokens": "['<|eot_id|>']"
+        }
+    }
+}
+```
 
 
 
