@@ -81,10 +81,10 @@ python start_server.vllm.py path_to_config root_to_save GPU port gpu_utilize
         "path_to_chat_template": "../chat_templates/llama-3.1-instruct.jinja",
         "stop_tokens": "['<|eot_id|>']",
         "api_key": "abc123",
-        "port": 8000,
-        "host": your local machine address,
-        "GPU": "0",
-        "gpu_utilize": 0.9
+        "port": e.g., 8000,
+        "host": the local machine address,
+        "GPU": e.g., "0",
+        "gpu_utilize": e.g., 0.9
     }
 }
 ```
