@@ -137,7 +137,7 @@ which is like:
 }
 ```
 
-For the personalized model, you may need to revise the code [code/reward.py](). You need to specify how the reward model can be used for reward calculation. 
+For the personalized model, you may need to revise the code [code/reward.py](./code/reward.py). You need to specify how the reward model can be used for reward calculation. 
 
 
 
