@@ -1,15 +1,4 @@
-# TOA: 
-
-
-<!-- <p align="center">
-  <!-- <em></em>
-  <br>
-   -->
-  <!-- <img src="./figures/mas.png" alt="" width="400">
-</p> -->
-
-<!-- [![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/pdf/2412.17061)
-   -->
+# TOA: Tree Searchbased Orchestrated Agents
 
 <div style="text-align: center;">
   <img src="./figures/mas.png" alt="" width="400">
