@@ -24,14 +24,17 @@
 This is officical repository for the work [Multi-Agent Sampling: Scaling Inference Compute for Data Synthesis with Tree Search-Based Agentic Collaboration](https://arxiv.org/pdf/2412.17061). We study how to synthesize data for alignment from multiple distinct language models such as Llama3, Qwen2, Mistral, etc, which is so called problem of multi-agent sampling. We propose [TOA]() (Tree Search-based Orchestrated Agents) to achieve this goal. Our method is driven by Monte Carlo Tree Search with a Reward Model integrated. 
 
 
+**TOA** is designed to **synthesize alignment data** (specifically the output responses) from a diverse range of language models. 
 
-**TOA** is designed to **synthesize alignment data** (specifically the output responses) from a diverse range of language models.
 
 ## 🌟 Key Features
 
-- 🔓 **Open-source models**: Llama Series, Qwen Series, Mistral Series, and more.
+- 🔓 **Open-source models**: [Llama Series](https://huggingface.co/meta-llama), [Qwen Series](https://huggingface.co/Qwen), [Mistral Series](https://huggingface.co/mistralai), and more.
 - 🔒 **Closed-source models**: OpenAI, Claude, etc.
-- 🎯 **Reward Model Integration**: TOA utilizes a reward model to guide and optimize the generation process, ensuring quality and relevance.
+- 😊 **OpenAI Compatible Server**: We support OpenAI compatible API to use the models. 
+- 🔨 **Reward Model Integration**: TOA utilizes a reward model to guide and optimize the generation process. You can easily specifiy a your own reward model.
+
+
 
 
 
