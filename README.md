@@ -54,7 +54,13 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 If you want to host the language models locally, you can use the provide the code to start the local servers. 
 
 ```bash
-cd bash/
+cd bash/launch_large_models
+
+python start_server.vllm.py path_to_config root_to_save GPU port gpu_utilize
+```
+
+```bash
+path_to_config: path to the configuration file of the model
 ```
 
 
