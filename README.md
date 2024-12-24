@@ -42,12 +42,22 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 
 
 
+
 ## News
 - [2024/12/22] [TOA paper](https://arxiv.org/pdf/2412.17061) is out at arXiv. 
 
 
 
 ## Quick Start
+
+### 1. Start Local Servers
+If you want to host the language models locally, you can use the provide the code to start the local servers. 
+
+```bash
+cd bash/
+```
+
+
 
 
 
