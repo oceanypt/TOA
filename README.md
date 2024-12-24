@@ -6,8 +6,9 @@
   <br>
    -->
   <img src="./figures/mas.png" alt="" width="400">
-  <br> [![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/pdf/2412.17061)
+  <em>[![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/pdf/2412.17061)</em>
 </p>
+
 
  
 
