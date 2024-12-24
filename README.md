@@ -1,5 +1,12 @@
 # TOA: Tree Searchbased Orchestrated Agents
 
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-green.svg)](LICENSE)
+[![arXiv](https://img.shields.io/badge/ArXiv-2406.04692-b31b1b.svg)](https://arxiv.org/abs/2406.04692)
+[![Discord](https://img.shields.io/badge/Discord-Together%20AI-blue?logo=discord&logoColor=white)](https://discord.com/invite/9Rk6sSeWEG)
+[![Twitter](https://img.shields.io/twitter/url/https/twitter.com/togethercompute.svg?style=social&label=Follow%20%40togethercompute)](https://twitter.com/togethercompute)
+
+
 <div style="text-align: center;">
   <img src="./figures/mas.png" alt="" width="400">
   <br>
