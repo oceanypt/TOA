@@ -34,6 +34,7 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 - 😊 **OpenAI Compatible Server**: We support OpenAI compatible API to use the models. 
 - 🎯 **Reward Model Integration**: TOA utilizes a reward model to guide and optimize the generation process. You can easily specifiy a your own reward model.
 - 💰 **Compute Efficient**: For each input question, TOA optimizes the generation structure dynamically with MCTS-based search, making our method more compute-efficient than other baselines for data synthesis. 
+- 📣 **Support Various Methods**: Our repository implements various methods for single- and multi-agent sampling.
 
 
 ## Project Directory Structure
@@ -141,6 +142,12 @@ For the personalized model, you may need to revise the code [code/reward.py](./c
 
 
 
+### 3. Start Data Synthesis
+Now, we can start data generation!
+```bash
+cd bash
+cd 
+```
 
 
 
