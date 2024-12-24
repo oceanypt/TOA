@@ -38,14 +38,15 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 
 
 ## Supported Methods
-| Method              | Paper        | Example Code |
-|---------------------|--------------|--------------|
-| Random Sampling     | [Link]()     | -            |
-| PRS                 | [Link]()     | -            |
-| Parallel Ensemble   | [Link]()     | -            |
-| Sequential Refine   | [Link]()     | -            |
-| MoA                 | [Link]()     | -            |
-| TOA (ours)          | [Link]()     | -            |
+| Method            | Paper                                                                 | Example Code                                                                  |
+|-------------------|----------------------------------------------------------------------|-------------------------------------------------------------------------------|
+| Random Sampling   | [Link](https://arxiv.org/abs/2407.21787)                             | [bash](bash/exp_alpaca_eval/run_generate.api.ensemble.pre_load.sh)            |
+| PRS               | [Link](https://arxiv.org/abs/2408.12163)                             | [bash](bash/exp_alpaca_eval/run_generate.api.prs.pre_load.sh)                 |
+| Parallel Ensemble | [Link]()                                                             | [bash](bash/exp_alpaca_eval/run_generate.api.ensemble.pre_load.sh)            |
+| Sequential Refine | [Link](https://arxiv.org/abs/2408.03314)                             | [bash](bash/exp_alpaca_eval/run_generate.api.ensemble_seq.pre_load.sh)        |
+| MoA               | [Link](https://arxiv.org/abs/2406.04692)                             | [bash](bash/exp_alpaca_eval/run_generate.api.moa.pre_load.sh)                 |
+| TOA (ours)        | [Link](https://arxiv.org/abs/2412.17061)                             | [bash](bash/exp_alpaca_eval/run_generate.api.mcts.pre_load.sh)                |
+
 
 
 
