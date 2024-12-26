@@ -97,7 +97,7 @@ The following reward models have been evaluated in our experiments:
 
  ## Synthesized Alignment Data
 
-We synthesized alignment data using the following four language models and a reward model. The input prompts were sourced from [Ultrafeedback](https://huggingface.co/princeton-nlp/llama3-ultrafeedback-armorm). For each prompt:
+We synthesized alignment data using the following four language models and a reward model. The input prompts were sourced from [Ultrafeedback](https://huggingface.co/datasets/princeton-nlp/llama3-ultrafeedback-armorm). For each prompt:
 - **160 responses** were sampled.
 - The **best response** with the highest reward was selected for **SFT data**.
 - For **DPO training**, the **ranked 30th response** was used as the rejected sample, and the best response was used as the chosen sample.
