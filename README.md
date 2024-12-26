@@ -239,6 +239,11 @@ After generation completion, you will get multiple responses for each input prom
   <img src="./figures/table_wmt.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
 </p>
 
+<p align="center">
+<span> dhisdhisdhi </span> <span> dhisdhisdhi </span>
+
+</p>
+
 
 <p align="center" style="display: flex; justify-content: space-between; gap: 2px;">
   <div>
