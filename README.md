@@ -217,7 +217,7 @@ After generation completion, you will get multiple responses for each input prom
 |-------------------------|-------------------------|
 | Caption for Image 1     | Caption for Image 2     |
 
-
+![Image 1](./figures/table_alpaca_eval.png)![Image 2](./figures/scaling_alpaca_eval.png)
 
 
 
