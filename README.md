@@ -158,7 +158,7 @@ The following reward models have been evaluated in our experiments:
 
 
 
-## Synthesized Alignment Data
+<!-- ## Synthesized Alignment Data
 
 We synthesized data from the following four language models and the reward model. The input prompts are taken from [Ultrafeedback](princeton-nlp/llama3-ultrafeedback-armorm). For each prompt, we sample 160 responses. We keep the best response with the highest reward to build SFT data. For DPO training, we select the ranked 30th response as the rejected sample and best one as the chosen sample. 
 |Models                                                                                      |Reward Model                                                                                 |SFT Data                                                                                               |DPO Data                                                                                     |
@@ -171,7 +171,33 @@ We synthesized data from the following four language models and the reward model
 |                                                                                            |                                                                                             | [SeqRefine](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-SeqRefine-model-num-4)                   |                                                                                                            |
 |                                                                                            |                                                                                             | [MoA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-MoA-model-num-4)                               |                                                                                                            |
 |                                                                                            |                                                                                             | [TOA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-TOA-model-num-4)                               |                                                                                                            |
+ -->
 
+
+ ## Synthesized Alignment Data
+
+We synthesized alignment data using the following four language models and a reward model. The input prompts were sourced from [Ultrafeedback](https://huggingface.co/princeton-nlp/llama3-ultrafeedback-armorm). For each prompt:
+- **160 responses** were sampled.
+- The **best response** with the highest reward was selected for **SFT data**.
+- For **DPO training**, the **ranked 30th response** was used as the rejected sample, and the best response was used as the chosen sample.
+
+### **Synthesized Data Summary**
+
+| **Models**                                                                                 | **Reward Model**                                                                        | **SFT Data**                                                                                       | **DPO Data**                                                                                   |
+|:------------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------|:---------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------|
+| [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct)          | [ArmoRM-Llama3-8B-v0.1](https://huggingface.co/RLHFlow/ArmoRM-Llama3-8B-v0.1)          | [Rand-Qwen2-7B-Inst](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-Rand-qwen2-7b-inst) | [TOA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-DPO-TOA-model-num-4)          |
+| [Qwen2-7B-Instruct](https://huggingface.co/Qwen/Qwen2-7B-Instruct)                        |                                                                                         | [Rand-Lla3.1-8B-Inst](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-Rand-lla3.1-8b-inst) |                                                                                                 |
+| [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2)     |                                                                                         | [PRS-Qwen2-7B-Inst](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-PRS-qwen2-7b-inst) |                                                                                                 |
+| [Yi-1.5-9B-Chat-16K](https://huggingface.co/01-ai/Yi-1.5-9B-Chat-16K)                     |                                                                                         | [PRS-Lla3.1-8B-Inst](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-PRS-lla3.1-8b-inst) |                                                                                                 |
+|                                                                                           |                                                                                         | [Par. Ensemble](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-Ensemble-model-num-4)  |                                                                                                 |
+|                                                                                           |                                                                                         | [SeqRefine](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-SeqRefine-model-num-4)    |                                                                                                 |
+|                                                                                           |                                                                                         | [MoA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-MoA-model-num-4)               |                                                                                                 |
+|                                                                                           |                                                                                         | [TOA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-TOA-model-num-4)               |                                                                                                 |
+
+### Key Notes:
+- **SFT Data**: The best response from the sampled 160 responses is used for supervised fine-tuning.
+- **DPO Data**: The 30th ranked response serves as the rejected sample, while the top response is used as the accepted sample.
+- Explore the provided links for detailed datasets and models.
 
 
 
