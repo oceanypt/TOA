@@ -259,7 +259,7 @@ After generation completion, you will get multiple responses for each input prom
 </p>
 
 
-<table>
+<table border=0>
   <tr>
     <td align="center">
       <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="height: 300px; object-fit: contain;"/>
