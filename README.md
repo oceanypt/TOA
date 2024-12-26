@@ -59,7 +59,7 @@ Random sampling and PRS are single-agent based methods.
 We have tested the following open-source language models and reward models. 
 
 | LLM Group 1 | LLM Group 2 |
-|-------------|-------------|
+|:-------------|:-------------|
 | [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) | [Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct) |
 | [Qwen2-7B-Instruct](https://huggingface.co/Qwen/Qwen2-7B-Instruct) | [Mistral-Large-Instruct-2407](https://huggingface.co/mistralai/Mistral-Large-Instruct-2407) |
 | [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) | [Qwen2-72B-Instruct](https://huggingface.co/Qwen/Qwen2-72B-Instruct) |
@@ -67,7 +67,7 @@ We have tested the following open-source language models and reward models.
 |             | [Wizardlm-2-8x22b](https://huggingface.co/alpindale/WizardLM-2-8x22B) |
 
 | Reward Models |
-|---------------|
+|:---------------|
 | [Skywork-Reward-Llama-3.1-8B-v0.2](https://huggingface.co/Skywork/Skywork-Reward-Llama-3.1-8B-v0.2) |
 | [Skywork-Reward-Gemma-2-27B-v0.2](https://huggingface.co/Skywork/Skywork-Reward-Gemma-2-27B-v0.2) |
 | [ArmoRM-Llama3-8B-v0.1](https://huggingface.co/RLHFlow/ArmoRM-Llama3-8B-v0.1) |
