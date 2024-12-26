@@ -184,6 +184,16 @@ After generation completion, you will get multiple responses for each input prom
 
 
 
+## Results
+### AlpacaEval
+<div style="text-align: center;">
+  <img src="./figures/table_alpaca_eval.png" alt="" width="400">
+  <br>
+  sdhisdhi
+</div>
+
+
+
 
 ## Citation
 ```bibtex
