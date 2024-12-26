@@ -75,7 +75,7 @@ This repository introduces [**TOA**](#), a framework for multi-agent sampling to
 - 📣 **Flexible Sampling Methods**: Supports both single-agent and multi-agent sampling.
 
 
-
+<!-- 
 ## Supported Methods
 ![](./figures/method.png)
 
@@ -89,7 +89,30 @@ This repository introduces [**TOA**](#), a framework for multi-agent sampling to
 | TOA (ours)        | [Link](https://arxiv.org/abs/2412.17061)                             | [bash](bash/exp_alpaca_eval/run_generate.api.mcts.pre_load.sh)                |
 
 
-Random sampling and PRS are single-agent based methods. 
+Random sampling and PRS are single-agent based methods.  -->
+
+
+## Supported Methods
+
+![](./figures/method.png)
+
+The table below summarizes the key methods supported in this repository, along with references to their respective papers and example code:
+
+| **Method**         | **Paper**                                                             | **Example Code**                                                               |
+|:--------------------|:----------------------------------------------------------------------|:-------------------------------------------------------------------------------|
+| **Random Sampling** | [Link](https://arxiv.org/abs/2407.21787)                             | [bash](bash/exp_alpaca_eval/run_generate.api.ensemble.pre_load.sh)            |
+| **PRS**             | [Link](https://arxiv.org/abs/2408.12163)                             | [bash](bash/exp_alpaca_eval/run_generate.api.prs.pre_load.sh)                 |
+| **Parallel Ensemble** | [Link]()                                                            | [bash](bash/exp_alpaca_eval/run_generate.api.ensemble.pre_load.sh)            |
+| **Sequential Refine** | [Link](https://arxiv.org/abs/2408.03314)                           | [bash](bash/exp_alpaca_eval/run_generate.api.ensemble_seq.pre_load.sh)        |
+| **MoA**             | [Link](https://arxiv.org/abs/2406.04692)                             | [bash](bash/exp_alpaca_eval/run_generate.api.moa.pre_load.sh)                 |
+| **TOA (Ours)**      | [Link](https://arxiv.org/abs/2412.17061)                             | [bash](bash/exp_alpaca_eval/run_generate.api.mcts.pre_load.sh)                |
+
+### Notes:
+- **Random Sampling** and **PRS** are single-agent-based methods.
+- **TOA** represents our novel approach, integrating Monte Carlo Tree Search (MCTS) to optimize multi-agent collaboration.
+
+Explore the table to understand the unique characteristics of each method and find implementation-ready examples!
+
 
 ## Supported LLMs and Reward Models
 We have tested the following open-source language models and reward models. 
