@@ -214,8 +214,18 @@ After generation completion, you will get multiple responses for each input prom
   </tr>
 </table>
 
-### AlpacaEval v2.0
+### 1. AlpacaEval v2.0
 We combine five language models to conduct best-of-160 sampling: [Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct), [Mistral-Large-Instruct-2407](https://huggingface.co/mistralai/Mistral-Large-Instruct-2407), [Qwen2-72B-Instruct](https://huggingface.co/Qwen/Qwen2-72B-Instruct), [Mixtral-8x22B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1), and [Wizardlm-2-8x22b](https://huggingface.co/alpindale/WizardLM-2-8x22B). The reward model is [ArmoRM-Llama3-8B-v0.1](https://huggingface.co/RLHFlow/ArmoRM-Llama3-8B-v0.1). The result is shown in Fig.(a). 
+
+To evaluate for AlpacaEval v2.0:
+```bash
+cd bash/exp_alpaca_eval
+
+bash run_generate.api.mcts.pre_load.sh (TOA)
+bash run_generate.api.moa.pre_load.sh (MoA)
+bash run_generate.api.ensemble_seq.pre_load.sh (Seq. Refine)
+bash run_generate.api.prs.pre_load.sh (PRS)
+```
 
 
 
