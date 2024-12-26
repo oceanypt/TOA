@@ -122,6 +122,18 @@ We synthesized alignment data using the following four language models and a rew
 
 
 
+Accordingly, we fine-tuned Llama3-8b-inst with the generated synthetic data:
+| **Model Name**          | **Link**                                                                                                       |
+|:---------------------|:-----------------------------------------------------------------------------------------------------------|
+| Rand-SFT           | [Rand-SFT](https://huggingface.co/oceanpty/TOA-ultrafeedback-lla3-8b-inst-sft-data-Rand-lla31-8b-inst)     |
+| PRS-SFT            | [PRS-SFT](https://huggingface.co/oceanpty/TOA-ultrafeedback-lla3-8b-inst-sft-data-PRS-lla31-8b-inst)       |
+| Par. Ensemble-SFT  | [Par. Ensemble-SFT](https://huggingface.co/oceanpty/TOA-ultrafeedback-lla3-8b-inst-sft-data-small-scale-ensemble) |
+| Seq. Refine-SFT    | [Seq. Refine-SFT](https://huggingface.co/oceanpty/TOA-ultrafeedback-lla3-8b-inst-sft-data-small-scale-SeqRefine) |
+| MoA-SFT            | [MoA-SFT](https://huggingface.co/oceanpty/TOA-ultrafeedback-lla3-8b-inst-sft-data-small-scale-MoA)         |
+| TOA-SFT            | [TOA-SFT](https://huggingface.co/oceanpty/TOA-ultrafeedback-lla3-8b-inst-sft-data-small-scale-TOA)         |
+| TOA-DPO            | [TOA-DPO](https://huggingface.co/oceanpty/TOA-ultrafeedback-lla3-8b-inst-dpo-data-small-scale-mcts-n-40-pi-0-ni-30) |
+
+
 ## Quick Start
 
 ### 0. Requirement
