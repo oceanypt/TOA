@@ -7,7 +7,7 @@
 
 [![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/pdf/2412.17061)
 [![License](https://img.shields.io/badge/License-Apache_2.0-green.svg)](LICENSE)
-[![Huggingface](https://img.shields.io/badge/%F0%9F%A4%97-TOA%20Collection-blue)](TOA)
+[![Huggingface](https://img.shields.io/badge/%F0%9F%A4%97-TOA%20Collection-blue)](https://huggingface.co/collections/oceanpty/toa-676a5150bce62ec5a039d42d)
 
 
 Welcome to the official repository for the work [**Multi-Agent Sampling: Scaling Inference Compute for Data Synthesis with Tree Search-Based Agentic Collaboration**](https://arxiv.org/pdf/2412.17061). 
