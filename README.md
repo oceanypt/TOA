@@ -121,8 +121,7 @@ We synthesized alignment data using the following four language models and a rew
 - Explore the provided links for detailed datasets and models.
 
 
-
-Accordingly, we fine-tuned Llama3-8b-inst with the generated synthetic data:
+Accordingly, we fine-tuned Llama3-8b-inst with the generated synthetic data using SFT or DPO training loss:
 | **Model Name**          | **Link**                                                                                                       |
 |:---------------------|:-----------------------------------------------------------------------------------------------------------|
 | Rand-SFT           | [Rand-SFT](https://huggingface.co/oceanpty/TOA-ultrafeedback-lla3-8b-inst-sft-data-Rand-lla31-8b-inst)     |
