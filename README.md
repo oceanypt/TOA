@@ -374,8 +374,8 @@ You are now ready to start generating data! Follow the steps below:
 #### **Steps to Run Data Synthesis**
 1. Navigate to the experiment directory:
 ```bash
-   cd bash
-   cd exp_alpaca_eval
+cd bash
+cd exp_alpaca_eval
 ```
 2.	Run the provided script to start the synthesis process:
 ```bash 
