@@ -302,7 +302,7 @@ python start_server.vllm.py path_to_config root_to_save GPU port gpu_utilize
 
 ### Notes
 - You can start servers for different models using this script.
-- Ensure that all server configurations are saved in the same directory (specified by [root_to_save]).
+- Ensure that all server configurations are saved in the same directory (specified by [root_to_save]()).
 
 By following these steps, you can run multiple local servers for hosting language models seamlessly.
 
