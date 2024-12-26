@@ -189,13 +189,6 @@ After generation completion, you will get multiple responses for each input prom
 
 <table style="border: none; width: 100%;">
   <tr>
-    <td align="center" colspan="2">
-      <img src="./figures/scaling_alpaca_eval.png" alt="Image 1" style="height: 250px; object-fit: contain;"/>
-      <br>
-      (a) Scaling results on AlpacaEval.
-    </td>
-  </tr>
-  <tr>
     <td align="center">
       <img src="./figures/table_alpaca_eval.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
       <br>
@@ -205,6 +198,13 @@ After generation completion, you will get multiple responses for each input prom
       <img src="./figures/table_wmt.png" alt="Image 3" style="height: 300px; object-fit: contain;"/>
       <br>
       (c) Result of WMT'22.
+    </td>
+  </tr>
+   <tr>
+    <td align="center" colspan="2">
+      <img src="./figures/scaling_alpaca_eval.png" alt="Image 1" style="height: 250px; object-fit: contain;"/>
+      <br>
+      (a) Scaling results on AlpacaEval.
     </td>
   </tr>
   <tr>
