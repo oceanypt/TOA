@@ -23,6 +23,7 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 ## Quick Links
 - [Key Features](#-key-features) 
 - [Supported Methods](#supported-methods)
+- [Supported LLMs and Reward Models](#supported-llms-and-reward-models)
 - [Synthesized Alignment Data](#synthesized-alignment-data)
 - [Quick Start](#quick-start)
 - [Results](#results)
