@@ -306,7 +306,7 @@ python start_server.vllm.py path_to_config root_to_save GPU port gpu_utilize
 
 By following these steps, you can run multiple local servers for hosting language models seamlessly.
 
-
+<!-- 
 ### 2. Reward Model
 A reward model is needed to generate rewards for generated responses in the real time. 
 
@@ -321,7 +321,39 @@ which is like:
 }
 ```
 
-For the personalized model, you may need to revise the code [code/reward.py](./code/reward.py). You need to specify how the reward model can be used for reward calculation. 
+For the personalized model, you may need to revise the code [code/reward.py](./code/reward.py). You need to specify how the reward model can be used for reward calculation.  -->
+
+
+以下是优化后的内容，将语言调整为更流畅且结构更加清晰的 Markdown 格式：
+
+### 2. Reward Model
+
+A reward model is required to generate real-time rewards for the generated responses.
+
+### **Steps to Configure the Reward Model**
+1. Navigate to the `model_configs` directory:
+```bash
+cd model_configs
+```
+2.	Provide the configuration file in JSON format. An example configuration looks like this:
+```json
+{
+    "reward_model": {
+        "name": "ArmoRM",
+        "path": "",
+        "GPU": "0"
+    }
+}
+```
+
+### Customization for Personalized Models
+
+If you need to use a personalized reward model, update the code in the following file:
+- code/reward.py
+
+Within this file, you must specify how the reward model will be used for reward calculation. Ensure the implementation aligns with your specific model’s requirements.
+
+By following these steps, you can easily integrate and customize the reward model for your needs.
 
 
 
