@@ -21,11 +21,11 @@ This is officical repository for the work [Multi-Agent Sampling: Scaling Inferen
 
 
 ## Quick Links
-    - [Key Features](#-key-features) 
-    - [Supported Methods](#supported-methods)
-    - [Synthesized Alignment Data](#synthesized-alignment-data)
-    - [Quick Start](#quick-start)
-    - [Results](#results)
+- [Key Features](#-key-features) 
+- [Supported Methods](#supported-methods)
+- [Synthesized Alignment Data](#synthesized-alignment-data)
+- [Quick Start](#quick-start)
+- [Results](#results)
 
 
 
