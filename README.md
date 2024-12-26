@@ -237,6 +237,7 @@ After generation completion, you will get multiple responses for each input prom
 <p align="center">
 
   <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="height: 300px; object-fit: contain;"/>
+  <br> Multi-Agent Sampling: Scaling Inference Compute for Data Synthesis with Tree Search-Based Agentic Collaboration Multi-Agent Sampling: Scaling Inference Compute for Data Synthesis with Tree Search-Based Agentic Collaboration Multi-Agent Sampling: Scaling Inference Compute for Data Synthesis with Tree Search-Based Agentic Collaboration
   <img src="./figures/table_wmt.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
 
 </p>
