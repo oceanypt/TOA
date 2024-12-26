@@ -10,10 +10,26 @@
 
 
 
-This is officical repository for the work [Multi-Agent Sampling: Scaling Inference Compute for Data Synthesis with Tree Search-Based Agentic Collaboration](https://arxiv.org/pdf/2412.17061). We study how to synthesize data for alignment from multiple distinct language models such as Llama3, Qwen2, Mistral, etc, which is so called problem of multi-agent sampling. We propose [TOA]() (Tree Search-based Orchestrated Agents) to achieve this goal. Our method is driven by Monte Carlo Tree Search with a Reward Model integrated. 
+<!-- This is officical repository for the work [Multi-Agent Sampling: Scaling Inference Compute for Data Synthesis with Tree Search-Based Agentic Collaboration](https://arxiv.org/pdf/2412.17061). We study how to synthesize data for alignment from multiple distinct language models such as Llama3, Qwen2, Mistral, etc, which is so called problem of multi-agent sampling. We propose [TOA]() (Tree Search-based Orchestrated Agents) to achieve this goal. Our method is driven by Monte Carlo Tree Search with a Reward Model integrated. 
 
 
 **TOA** is designed to **synthesize alignment data** (specifically the output responses) from a diverse range of language models. 
+ -->
+
+
+Welcome to the official repository for the work [**Multi-Agent Sampling: Scaling Inference Compute for Data Synthesis with Tree Search-Based Agentic Collaboration**](https://arxiv.org/pdf/2412.17061). 
+
+In this work, we tackle the challenge of synthesizing alignment data from multiple distinct language models, such as Llama3, Qwen2, Mistral, and others—an approach known as **multi-agent sampling**. To address this problem, we introduce [**TOA**](), a novel method leveraging **Tree Search-based Orchestrated Agents**.
+
+Our approach integrates **Monte Carlo Tree Search (MCTS)** with a **Reward Model** to optimize collaboration among diverse language models, ensuring high-quality alignment data synthesis.
+
+## **About TOA**
+
+**TOA** is specifically designed to:
+- Facilitate the synthesis of alignment data, particularly high-quality response outputs.
+- Collaborate effectively with a diverse set of language models to ensure robust and scalable data synthesis.
+- Harness the power of **tree search techniques** for orchestrating agentic interactions among models.
+
 
 
 ## News
