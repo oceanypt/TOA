@@ -242,12 +242,12 @@ After generation completion, you will get multiple responses for each input prom
 
 <p align="center" style="display: flex; justify-content: space-between; gap: 2px;">
   <div>
-    <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="height: 300px; object-fit: contain;"/>
+    <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="height: 200px; object-fit: contain;"/>
     <br>
     <span>Caption for Image 1</span>
   </div>
   <div>
-    <img src="./figures/table_wmt.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
+    <img src="./figures/table_wmt.png" alt="Image 2" style="height: 200px; object-fit: contain;"/>
     <br>
     <span>Caption for Image 2</span>
   </div>
