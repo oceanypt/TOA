@@ -111,10 +111,9 @@ The table below summarizes the key methods supported in this repository, along w
 - **Random Sampling** and **PRS** are single-agent-based methods.
 - **TOA** represents our novel approach, integrating Monte Carlo Tree Search (MCTS) to optimize multi-agent collaboration.
 
-Explore the table to understand the unique characteristics of each method and find implementation-ready examples!
 
 
-## Supported LLMs and Reward Models
+<!-- ## Supported LLMs and Reward Models
 We have tested the following open-source language models and reward models. 
 
 | LLM Group 1 | LLM Group 2 |
@@ -129,7 +128,35 @@ We have tested the following open-source language models and reward models.
 |:---------------|
 | [Skywork-Reward-Llama-3.1-8B-v0.2](https://huggingface.co/Skywork/Skywork-Reward-Llama-3.1-8B-v0.2) |
 | [Skywork-Reward-Gemma-2-27B-v0.2](https://huggingface.co/Skywork/Skywork-Reward-Gemma-2-27B-v0.2) |
-| [ArmoRM-Llama3-8B-v0.1](https://huggingface.co/RLHFlow/ArmoRM-Llama3-8B-v0.1) |
+| [ArmoRM-Llama3-8B-v0.1](https://huggingface.co/RLHFlow/ArmoRM-Llama3-8B-v0.1) | -->
+
+
+## Supported LLMs and Reward Models
+
+We have tested the following open-source language models (LLMs) and reward models in our framework:
+
+### **Tested Language Models**
+The LLMs are grouped below for clarity and ease of reference:
+
+| **LLM Group 1**                                                                 | **LLM Group 2**                                                                 |
+|:--------------------------------------------------------------------------------|:--------------------------------------------------------------------------------|
+| [Llama-3.1-8B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct) | [Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct) |
+| [Qwen2-7B-Instruct](https://huggingface.co/Qwen/Qwen2-7B-Instruct)               | [Mistral-Large-Instruct-2407](https://huggingface.co/mistralai/Mistral-Large-Instruct-2407) |
+| [Mistral-7B-Instruct-v0.2](https://huggingface.co/mistralai/Mistral-7B-Instruct-v0.2) | [Qwen2-72B-Instruct](https://huggingface.co/Qwen/Qwen2-72B-Instruct)           |
+| [Yi-1.5-9B-Chat-16K](https://huggingface.co/01-ai/Yi-1.5-9B-Chat-16K)           | [Mixtral-8x22B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1) |
+|                                                                                 | [Wizardlm-2-8x22B](https://huggingface.co/alpindale/WizardLM-2-8x22B)          |
+
+### **Tested Reward Models**
+The following reward models have been evaluated in our experiments:
+
+| **Reward Models**                                                                                      |
+|:-------------------------------------------------------------------------------------------------------|
+| [Skywork-Reward-Llama-3.1-8B-v0.2](https://huggingface.co/Skywork/Skywork-Reward-Llama-3.1-8B-v0.2)     |
+| [Skywork-Reward-Gemma-2-27B-v0.2](https://huggingface.co/Skywork/Skywork-Reward-Gemma-2-27B-v0.2)       |
+| [ArmoRM-Llama3-8B-v0.1](https://huggingface.co/RLHFlow/ArmoRM-Llama3-8B-v0.1)                           |
+
+
+
 
 ## Synthesized Alignment Data
 
@@ -144,6 +171,8 @@ We synthesized data from the following four language models and the reward model
 |                                                                                            |                                                                                             | [SeqRefine](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-SeqRefine-model-num-4)                   |                                                                                                            |
 |                                                                                            |                                                                                             | [MoA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-MoA-model-num-4)                               |                                                                                                            |
 |                                                                                            |                                                                                             | [TOA](https://huggingface.co/datasets/oceanpty/TOA-Ultrafeedback-SFT-TOA-model-num-4)                               |                                                                                                            |
+
+
 
 
 ## Quick Start
