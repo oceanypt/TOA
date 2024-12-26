@@ -357,14 +357,38 @@ By following these steps, you can easily integrate and customize the reward mode
 
 
 
-### 3. Start Data Synthesis
+<!-- ### 3. Start Data Synthesis
 Now, we can start data generation!
 ```bash
 cd bash
 cd exp_alpaca_eval
 bash run_generate.api.mcts.pre_load.sh
 ```
-After generation completion, you will get multiple responses for each input prompt. Each response has a reward, which can be used to do reject sampling or best-of-N sampling. 
+After generation completion, you will get multiple responses for each input prompt. Each response has a reward, which can be used to do reject sampling or best-of-N sampling.  -->
+
+
+### 3. Start Data Synthesis
+
+You are now ready to start generating data! Follow the steps below:
+
+#### **Steps to Run Data Synthesis**
+1. Navigate to the experiment directory:
+```bash
+   cd bash
+   cd exp_alpaca_eval
+```
+2.	Run the provided script to start the synthesis process:
+```bash 
+bash run_generate.api.mcts.pre_load.sh
+```
+
+**What Happens Next**
+- After the generation is complete, you will obtain multiple responses for each input prompt.
+- Each response is associated with a reward, which can be used for:
+    - Reject Sampling: Filter out lower-quality responses.
+    - Best-of-N Sampling: Select the highest-quality response from the generated samples.
+
+By following these steps, you can efficiently generate alignment data tailored to your requirements.
 
 
 
