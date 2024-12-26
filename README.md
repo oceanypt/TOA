@@ -305,6 +305,9 @@ Ensemble: bash run_generate.api.ensemble.pre_load.sh
 PRS: bash run_generate.api.prs.pre_load.sh 
 ```
 
+#### Outputs:
+We provide the generated responses [here](https://huggingface.co/datasets/oceanpty/TOA-AlpacaEval).
+
 
 ### 2. WMT'22
 
@@ -316,6 +319,10 @@ The results are presented in **Fig. (b)**, where the evaluation metrics are base
 ```
 cd bash/exp_nmt
 ```
+
+#### Outputs:
+We provide the generated responses [here](https://huggingface.co/datasets/oceanpty/TOA-WMT22).
+
 
 
 ### 3. Scaling Inference Compute
