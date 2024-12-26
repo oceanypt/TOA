@@ -67,10 +67,10 @@ This repository introduces [**TOA**](#), a framework for multi-agent sampling to
 - **Monte Carlo Tree Search (MCTS)**: Optimizes response generation using MCTS with a reward model.
 
 ### 🔑 **Highlights**
-- 🔓 **Open-source Models**: Supports [Llama](https://huggingface.co/meta-llama), [Qwen](https://huggingface.co/Qwen), [Mistral](https://huggingface.co/mistralai), and more.
-- 🔒 **Closed-source Models**: Compatible with OpenAI, Claude, and others.
-- 😊 **OpenAI-Compatible Server**: Provides OpenAI API compatibility for easy integration.
-- 🎯 **Reward Model Integration**: Allows custom reward models to guide optimization.
+- 😊 **Universal Model Compatibility**: Fully compatible with any model offering OpenAI-like APIs:
+  - 🔓 **Open-source Models**: Compatible with [Llama](https://huggingface.co/meta-llama), [Qwen](https://huggingface.co/Qwen), [Mistral](https://huggingface.co/mistralai), and others.
+  - 🔒 **Closed-source Models**: Works with proprietary models such as OpenAI, Claude, and more.
+- 🎯 **Reward Model Integration**: Allows custom reward models to guide generation.
 - 💰 **Compute Efficient**: Uses MCTS for efficient computation and response generation.
 - 📣 **Flexible Sampling Methods**: Supports both single-agent and multi-agent sampling.
 
