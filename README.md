@@ -8,7 +8,7 @@
 [![arXiv](https://img.shields.io/badge/arXiv-paper-b31b1b.svg)](https://arxiv.org/pdf/2412.17061)
 [![License](https://img.shields.io/badge/License-Apache_2.0-green.svg)](LICENSE)
 
-
+[Key Features](#-key-features) [Supported Methods](#supported-methods) [Synthesized Alignment Data](#synthesized-alignment-data) [Quick Start](#quick-start) [Results](#results)
 
 
 This is officical repository for the work [Multi-Agent Sampling: Scaling Inference Compute for Data Synthesis with Tree Search-Based Agentic Collaboration](https://arxiv.org/pdf/2412.17061). We study how to synthesize data for alignment from multiple distinct language models such as Llama3, Qwen2, Mistral, etc, which is so called problem of multi-agent sampling. We propose [TOA]() (Tree Search-based Orchestrated Agents) to achieve this goal. Our method is driven by Monte Carlo Tree Search with a Reward Model integrated. 
