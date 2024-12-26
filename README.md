@@ -197,16 +197,17 @@ After generation completion, you will get multiple responses for each input prom
   <img src="./figures/table_wmt.png" alt="Image 2" style="width: 48%;"/>
 </div>
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <figure style="text-align: center; width: 45%;">
-    <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="width: 45%;" />
-    <figcaption>Caption for Image 1</figcaption>
-  </figure>
-  <figure style="text-align: center; width: 45%;">
-    <img src="./figures/table_wmt.png" alt="Image 2" style="width: 45%;" />
-    <figcaption>Caption for Image 2</figcaption>
-  </figure>
-</div>
+
+<p align="center">
+  <img src="./figures/table_alpaca_eval.png" alt="Image 1" width="45%">
+  <br>
+  Caption for Image 1
+</p>
+<p align="center">
+  <img src="./figures/table_wmt.png" alt="Image 2" width="45%">
+  <br>
+  Caption for Image 2
+</p>
 
 
 
