@@ -210,6 +210,10 @@ After generation completion, you will get multiple responses for each input prom
 </p>
 
 
+| ![Image 1](./figures/table_alpaca_eval.png) | ![Image 2](./figures/table_wmt.png) |
+|-------------------------|-------------------------|
+| Caption for Image 1     | Caption for Image 2     |
+
 
 
 
