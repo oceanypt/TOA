@@ -186,137 +186,8 @@ After generation completion, you will get multiple responses for each input prom
 
 ## Results
 ### AlpacaEval
-<div style="text-align: center;">
-  <img src="./figures/table_alpaca_eval.png" alt="" width="400">
-  <br>
-  sdhisdhi
-</div>
-
-<div style="display: flex; justify-content: space-between;">
-  <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="width: 48%;"/>
-  <img src="./figures/table_wmt.png" alt="Image 2" style="width: 48%;"/>
-</div>
-
-
-<p align="center">
-  <img src="./figures/table_alpaca_eval.png" alt="Image 1" width="45%">
-  <br>
-  Caption for Image 1
-</p>
-<p align="center">
-  <img src="./figures/table_wmt.png" alt="Image 2" width="45%">
-  <br>
-  Caption for Image 2
-</p>
-
-
-| ![Image 1](./figures/table_alpaca_eval.png) | ![Image 2](./figures/scaling_alpaca_eval.png) ![Image 1](./figures/table_wmt.png) |
-|-------------------------|-------------------------|
-| Caption for Image 1     | Caption for Image 2     |
-| ![Image 1](./figures/table_wmt.png) | ![Image 2](./figures/table_data_syn_alpaca_eval.png) |
-|-------------------------|-------------------------|
-| Caption for Image 1     | Caption for Image 2     |
-
-![Image 1](./figures/table_alpaca_eval.png)![Image 2](./figures/scaling_alpaca_eval.png)
-
-
-
-<p align="center">
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="height: 300px; object-fit: contain;"/>
-  <img src="./figures/table_wmt.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
-</div>
-</p>
-
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="height: 300px; object-fit: contain;"/>
-  <img src="./figures/table_wmt.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
-</div>
-
-
-<p align="center">
-  <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="height: 300px; object-fit: contain;"/>
-  <img src="./figures/table_wmt.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
-</p>
-
-<p align="center">
-<span> dhisdhisdhi </span> <span> dhisdhisdhi </span>
-
-</p>
-
-
-<p align="center" style="display: flex; justify-content: space-between; gap: 2px;">
-  <div>
-    <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="height: 200px; object-fit: contain;"/>
-    <br>
-    <span>Caption for Image 1</span>
-  </div>
-  <div>
-    <img src="./figures/table_wmt.png" alt="Image 2" style="height: 200px; object-fit: contain;"/>
-    <br>
-    <span>Caption for Image 2</span>
-  </div>
-</p>
-
-
-<table style="border: none;">
-  <tr>
-    <td align="center">
-      <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="height: 300px; object-fit: contain;"/>
-      <br>
-      (a) AlpacaEval 2.0 result.
-    </td>
-    <td align="center">
-      <img src="./figures/table_wmt.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
-      <br>
-      (b) WMT'22 result.
-    </td>
-  </tr>
-</table>
-
-
-
 
 <table style="border: none; width: 100%;">
-  <tr>
-    <!-- 第一列：一张图 -->
-    <td align="center" style="width: 33%;">
-      <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="height: 300px; object-fit: contain;"/>
-      <br>
-      (a) AlpacaEval 2.0 result.
-    </td>
-    <!-- 第二列：两张图 -->
-    <td align="center" style="width: 33%;">
-      <table style="border: none;">
-        <tr>
-          <td align="center">
-            <img src="./figures/scaling_alpaca_eval.png" alt="Image 2" style="height: 145px; object-fit: contain;"/>
-            <br>
-            (b) WMT'22 result 1.
-          </td>
-        </tr>
-        <tr>
-          <td align="center">
-            <img src="./figures/table_wmt.png" alt="Image 3" style="height: 145px; object-fit: contain;"/>
-            <br>
-            (c) WMT'22 result 2.
-          </td>
-        </tr>
-      </table>
-    </td>
-    <!-- 第三列：一张图 -->
-    <td align="center" style="width: 33%;">
-      <img src="./figures/table_data_syn_alpaca_eval.png" alt="Image 4" style="height: 300px; object-fit: contain;"/>
-      <br>
-      (d) Final result.
-    </td>
-  </tr>
-</table>
-
-
-
-<table style="border: none; width: 100%;">
-  <!-- 第一行：一张图 -->
   <tr>
     <td align="center" colspan="2">
       <img src="./figures/scaling_alpaca_eval.png" alt="Image 1" style="height: 250px; object-fit: contain;"/>
@@ -324,7 +195,6 @@ After generation completion, you will get multiple responses for each input prom
       (a) Scaling results on AlpacaEval.
     </td>
   </tr>
-  <!-- 第二行：两张图 -->
   <tr>
     <td align="center">
       <img src="./figures/table_alpaca_eval.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
@@ -337,7 +207,6 @@ After generation completion, you will get multiple responses for each input prom
       (c) Result of WMT'22.
     </td>
   </tr>
-  <!-- 第三行：一张图 -->
   <tr>
     <td align="center" colspan="2">
       <img src="./figures/table_data_syn_alpaca_eval.png" alt="Image 4" style="height: 350px; object-fit: contain;"/>
