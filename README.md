@@ -330,7 +330,7 @@ For the personalized model, you may need to revise the code [code/reward.py](./c
 
 A reward model is required to generate real-time rewards for the generated responses.
 
-### **Steps to Configure the Reward Model**
+#### **Steps to Configure the Reward Model**
 1. Navigate to the `model_configs` directory:
 ```bash
 cd model_configs
@@ -346,7 +346,7 @@ cd model_configs
 }
 ```
 
-### Customization for Personalized Models
+#### Customization for Personalized Models
 
 If you need to use a personalized reward model, update the code in the following file:
 - code/reward.py
