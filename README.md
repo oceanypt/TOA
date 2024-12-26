@@ -41,6 +41,23 @@ Our approach integrates **Monte Carlo Tree Search (MCTS)** with a **Reward Model
 - 📣 **Support Various Methods**: Our repository implements various methods for single- and multi-agent sampling. -->
 
 
+
+
+## News
+- [2024/12/22] [TOA paper](https://arxiv.org/pdf/2412.17061) is out at arXiv. 
+
+
+## Quick Links
+- [Key Features](#-key-features) 
+- [Supported Methods](#supported-methods)
+- [Supported LLMs and Reward Models](#supported-llms-and-reward-models)
+- [Synthesized Alignment Data](#synthesized-alignment-data)
+- [Quick Start](#quick-start)
+- [Results](#results)
+- [Citation](#citation)
+
+
+
 ## 🌟 Key Features
 
 This repository introduces [**TOA**](#), a cutting-edge framework for multi-agent sampling designed to synthesize high-quality alignment data from a diverse set of language models. Here’s what makes this work stand out:
@@ -62,29 +79,14 @@ This repository introduces [**TOA**](#), a cutting-edge framework for multi-agen
 
 
 
-## News
-- [2024/12/22] [TOA paper](https://arxiv.org/pdf/2412.17061) is out at arXiv. 
-
-
-## Quick Links
-- [Key Features](#-key-features) 
-- [Supported Methods](#supported-methods)
-- [Supported LLMs and Reward Models](#supported-llms-and-reward-models)
-- [Synthesized Alignment Data](#synthesized-alignment-data)
-- [Quick Start](#quick-start)
-- [Results](#results)
-- [Citation](#citation)
-
-
-
-## 🌟 Key Features
+<!-- ## 🌟 Key Features
 
 - 🔓 **Open-source models**: [Llama Series](https://huggingface.co/meta-llama), [Qwen Series](https://huggingface.co/Qwen), [Mistral Series](https://huggingface.co/mistralai), and more.
 - 🔒 **Closed-source models**: OpenAI, Claude, etc.
 - 😊 **OpenAI Compatible Server**: We support OpenAI compatible API to use the models. 
 - 🎯 **Reward Model Integration**: TOA utilizes a reward model to guide and optimize the generation process. You can easily specifiy a your own reward model.
 - 💰 **Compute Efficient**: For each input question, TOA optimizes the generation structure dynamically with MCTS-based search, making our method more compute-efficient than other baselines for data synthesis. 
-- 📣 **Support Various Methods**: Our repository implements various methods for single- and multi-agent sampling.
+- 📣 **Support Various Methods**: Our repository implements various methods for single- and multi-agent sampling. -->
 
 
 ## Supported Methods
