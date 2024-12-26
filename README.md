@@ -229,6 +229,22 @@ PRS: bash run_generate.api.prs.pre_load.sh
 ```
 
 
+### 2. WMT'22
+We also use the above large language models for best-of-160 sampling. The reward model now becomes [KIWI](https://huggingface.co/Unbabel/wmt22-cometkiwi-da). The results are shown in Fig.(b), where the metrics are [KIWI-XXL](https://huggingface.co/Unbabel/wmt23-cometkiwi-da-xxl). 
+
+To evaluate for WMT'22:
+```
+cd bash/exp_nmt
+```
+
+
+### 3. Scaling Inference Compute
+We present the results of scaling inference compute in Fig.(c). Left using [ArmoRM-Llama3-8B-v0.1](https://huggingface.co/RLHFlow/ArmoRM-Llama3-8B-v0.1) as the reward model for generation and evaluation. Right further using GPT-4 for another round of evaluation on the best response with the highest Armo Reward. 
+
+
+
+
+
 
 
 
