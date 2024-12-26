@@ -1,7 +1,7 @@
 # TOA: Tree Search-based Orchestrated Agents
 
 <div style="text-align: center;">
-  <img src="./figures/mas.png" alt="" width="600">
+  <img src="./figures/mas.png" alt="" width="800">
   <br>
 </div>
 
