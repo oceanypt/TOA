@@ -319,9 +319,9 @@ After generation completion, you will get multiple responses for each input prom
   <!-- 第一行：一张图 -->
   <tr>
     <td align="center" colspan="2">
-      <img src="./figures/scaling_alpaca_eval.png" alt="Image 1" style="height: 300px; object-fit: contain;"/>
+      <img src="./figures/scaling_alpaca_eval.png" alt="Image 1" style="height: 250px; object-fit: contain;"/>
       <br>
-      (a) AlpacaEval 2.0 result.
+      (a) Scaling results on AlpacaEval.
     </td>
   </tr>
   <!-- 第二行：两张图 -->
@@ -329,20 +329,20 @@ After generation completion, you will get multiple responses for each input prom
     <td align="center">
       <img src="./figures/table_alpaca_eval.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
       <br>
-      (b) WMT'22 result.
+      (b) Result of AlpacaEval 2.0
     </td>
     <td align="center">
       <img src="./figures/table_wmt.png" alt="Image 3" style="height: 300px; object-fit: contain;"/>
       <br>
-      (c) Another result.
+      (c) Result of WMT'22.
     </td>
   </tr>
   <!-- 第三行：一张图 -->
   <tr>
     <td align="center" colspan="2">
-      <img src="./figures/table_data_syn_alpaca_eval.png" alt="Image 4" style="height: 300px; object-fit: contain;"/>
+      <img src="./figures/table_data_syn_alpaca_eval.png" alt="Image 4" style="height: 350px; object-fit: contain;"/>
       <br>
-      (d) Final result.
+      (d) Effectiveness of synthetic alignment data.
     </td>
   </tr>
 </table>
