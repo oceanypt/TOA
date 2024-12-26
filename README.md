@@ -199,11 +199,11 @@ After generation completion, you will get multiple responses for each input prom
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
   <figure style="text-align: center; width: 45%;">
-    <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="width: 100%;" />
+    <img src="./figures/table_alpaca_eval.png" alt="Image 1" style="width: 48%;" />
     <figcaption>Caption for Image 1</figcaption>
   </figure>
   <figure style="text-align: center; width: 45%;">
-    <img src="./figures/table_wmt.png" alt="Image 2" style="width: 100%;" />
+    <img src="./figures/table_wmt.png" alt="Image 2" style="width: 48%;" />
     <figcaption>Caption for Image 2</figcaption>
   </figure>
 </div>
