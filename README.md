@@ -313,6 +313,40 @@ After generation completion, you will get multiple responses for each input prom
   </tr>
 </table>
 
+
+
+<table style="border: none; width: 100%;">
+  <!-- 第一行：一张图 -->
+  <tr>
+    <td align="center" colspan="2">
+      <img src="./figures/scaling_alpaca_eval.png" alt="Image 1" style="height: 300px; object-fit: contain;"/>
+      <br>
+      (a) AlpacaEval 2.0 result.
+    </td>
+  </tr>
+  <!-- 第二行：两张图 -->
+  <tr>
+    <td align="center">
+      <img src="./figures/table_alpaca_eval.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
+      <br>
+      (b) WMT'22 result.
+    </td>
+    <td align="center">
+      <img src="./figures/table_wmt.png" alt="Image 3" style="height: 300px; object-fit: contain;"/>
+      <br>
+      (c) Another result.
+    </td>
+  </tr>
+  <!-- 第三行：一张图 -->
+  <tr>
+    <td align="center" colspan="2">
+      <img src="./figures/table_data_syn_alpaca_eval.png" alt="Image 4" style="height: 300px; object-fit: contain;"/>
+      <br>
+      (d) Final result.
+    </td>
+  </tr>
+</table>
+
 ## Citation
 ```bibtex
 @misc{ye2024multiagentsamplingscalinginference,
