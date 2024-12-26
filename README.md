@@ -221,10 +221,11 @@ To evaluate for AlpacaEval v2.0:
 ```bash
 cd bash/exp_alpaca_eval
 
-bash run_generate.api.mcts.pre_load.sh (TOA)
-bash run_generate.api.moa.pre_load.sh (MoA)
-bash run_generate.api.ensemble_seq.pre_load.sh (Seq. Refine)
-bash run_generate.api.prs.pre_load.sh (PRS)
+TOA: bash run_generate.api.mcts.pre_load.sh 
+MoA: bash run_generate.api.moa.pre_load.sh 
+Seq. Refine: bash run_generate.api.ensemble_seq.pre_load.sh 
+Ensemble: bash run_generate.api.ensemble.pre_load.sh
+PRS: bash run_generate.api.prs.pre_load.sh 
 ```
 
 
