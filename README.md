@@ -57,36 +57,23 @@ Our approach integrates **Monte Carlo Tree Search (MCTS)** with a **Reward Model
 - [Citation](#citation)
 
 
-
 ## 🌟 Key Features
 
-This repository introduces [**TOA**](#), a cutting-edge framework for multi-agent sampling designed to synthesize high-quality alignment data from a diverse set of language models. Here’s what makes this work stand out:
+This repository introduces [**TOA**](#), a framework for multi-agent sampling to synthesize high-quality alignment data from diverse language models:
 
 ### 🚀 **TOA Overview**
-- **Facilitates Alignment Data Synthesis**: TOA excels in synthesizing alignment data, particularly high-quality response outputs from multiple distinct language models.
-- **Agent Collaboration**: Efficiently orchestrates interactions among diverse models, including open-source and closed-source options, for scalable and robust data synthesis.
-- **Monte Carlo Tree Search (MCTS)**: Integrates MCTS with a reward model to dynamically optimize the generation structure for each input question.
+- **Alignment Data Synthesis**: Generates high-quality responses from multiple language models.
+- **Agent Collaboration**: Coordinates diverse models for scalable and robust data synthesis.
+- **Monte Carlo Tree Search (MCTS)**: Optimizes response generation using MCTS with a reward model.
 
+### 🔑 **Highlights**
+- 🔓 **Open-source Models**: Supports [Llama](https://huggingface.co/meta-llama), [Qwen](https://huggingface.co/Qwen), [Mistral](https://huggingface.co/mistralai), and more.
+- 🔒 **Closed-source Models**: Compatible with OpenAI, Claude, and others.
+- 😊 **OpenAI-Compatible Server**: Provides OpenAI API compatibility for easy integration.
+- 🎯 **Reward Model Integration**: Allows custom reward models to guide optimization.
+- 💰 **Compute Efficient**: Uses MCTS for efficient computation and response generation.
+- 📣 **Flexible Sampling Methods**: Supports both single-agent and multi-agent sampling.
 
-### 🔑 **Key Features**
-- 🔓 **Open-source models**: Compatible with models like [Llama Series](https://huggingface.co/meta-llama), [Qwen Series](https://huggingface.co/Qwen), [Mistral Series](https://huggingface.co/mistralai), and more.
-- 🔒 **Closed-source models**: Support for proprietary models, including OpenAI and Claude.
-- 😊 **OpenAI-Compatible Server**: Seamlessly integrates with OpenAI-compatible APIs for model usage.
-- 🎯 **Reward Model Integration**: TOA incorporates a reward model to guide and optimize the generation process. Users can specify their own reward model effortlessly.
-- 💰 **Compute Efficient**: Employs MCTS-based search to dynamically optimize computation for each input, achieving greater efficiency compared to other baselines.
-- 📣 **Support for Various Sampling Methods**: Includes implementations for both single-agent and multi-agent sampling methods.
-
-
-
-
-<!-- ## 🌟 Key Features
-
-- 🔓 **Open-source models**: [Llama Series](https://huggingface.co/meta-llama), [Qwen Series](https://huggingface.co/Qwen), [Mistral Series](https://huggingface.co/mistralai), and more.
-- 🔒 **Closed-source models**: OpenAI, Claude, etc.
-- 😊 **OpenAI Compatible Server**: We support OpenAI compatible API to use the models. 
-- 🎯 **Reward Model Integration**: TOA utilizes a reward model to guide and optimize the generation process. You can easily specifiy a your own reward model.
-- 💰 **Compute Efficient**: For each input question, TOA optimizes the generation structure dynamically with MCTS-based search, making our method more compute-efficient than other baselines for data synthesis. 
-- 📣 **Support Various Methods**: Our repository implements various methods for single- and multi-agent sampling. -->
 
 
 ## Supported Methods
