@@ -185,26 +185,24 @@ After generation completion, you will get multiple responses for each input prom
 
 
 ## Results
-### AlpacaEval
-
 <table style="border: none; width: 100%;">
   <tr>
     <td align="center">
       <img src="./figures/table_alpaca_eval.png" alt="Image 2" style="height: 300px; object-fit: contain;"/>
       <br>
-      (b) Result of AlpacaEval 2.0
+      (a) Result of AlpacaEval 2.0
     </td>
     <td align="center">
       <img src="./figures/table_wmt.png" alt="Image 3" style="height: 300px; object-fit: contain;"/>
       <br>
-      (c) Result of WMT'22.
+      (b) Result of WMT'22.
     </td>
   </tr>
    <tr>
     <td align="center" colspan="2">
       <img src="./figures/scaling_alpaca_eval.png" alt="Image 1" style="height: 250px; object-fit: contain;"/>
       <br>
-      (a) Scaling results on AlpacaEval.
+      (c) Scaling results on AlpacaEval.
     </td>
   </tr>
   <tr>
@@ -215,6 +213,14 @@ After generation completion, you will get multiple responses for each input prom
     </td>
   </tr>
 </table>
+
+### AlpacaEval v2.0
+We combine five language models to conduct best-of-160 sampling: [Llama-3.1-70B-Instruct](https://huggingface.co/meta-llama/Llama-3.1-70B-Instruct), [Mistral-Large-Instruct-2407](https://huggingface.co/mistralai/Mistral-Large-Instruct-2407), [Qwen2-72B-Instruct](https://huggingface.co/Qwen/Qwen2-72B-Instruct), [Mixtral-8x22B-Instruct-v0.1](https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1), and [Wizardlm-2-8x22b](https://huggingface.co/alpindale/WizardLM-2-8x22B). The reward model is [ArmoRM-Llama3-8B-v0.1](https://huggingface.co/RLHFlow/ArmoRM-Llama3-8B-v0.1). The result is shown in Fig.(a). 
+
+
+
+
+
 
 ## Citation
 ```bibtex
