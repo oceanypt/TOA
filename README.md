@@ -207,7 +207,7 @@ We synthesized alignment data using the following four language models and a rew
 We primarily require [vLLM](https://docs.vllm.ai/en/latest/getting_started/installation.html) to be installed to ensure efficient and fast model inference for our code. Please make sure that vLLM is installed on your machine. Alternatively, other toolkits like Sglang can also be used.
 
 
-
+<!-- 
 ### 1. Start Local Servers
 If you want to host the language models locally, you can use the provide the code to start the local servers. 
 
@@ -251,6 +251,60 @@ python start_server.vllm.py path_to_config root_to_save GPU port gpu_utilize
 - gpu_utilize: how much gpu memory to use, such as 0.9, 0.8
 
 You can start the server for different models, just make sure to save all the server configuration into one same folder, that is [root_to_save](). 
+ -->
+
+
+### 1. Start Local Servers
+
+If you want to host language models locally, you can use the provided code to start local servers.
+
+#### **Steps to Start the Server**
+Navigate to the directory and run the following command:
+
+```bash
+cd bash/launch_large_models
+
+python start_server.vllm.py path_to_config root_to_save GPU port gpu_utilize
+```
+##### Parameter Descriptions
+
+- path_to_config: Path to the model configuration file (in JSON format). Example:
+```json
+{
+    "policy_model": {
+        "llama-3.1-8b-instruct": {
+            "path_to_model": "",
+            "path_to_chat_template": "../chat_templates/llama-3.1-instruct.jinja",
+            "stop_tokens": "['<|eot_id|>']"
+        }
+    }
+}
+```
+- root_to_save: Path to save the server configuration (in JSON format). Example:
+```json
+{
+    "model_name": "llama-3.1-8b-instruct",
+    "config": {
+        "path_to_model": "",
+        "path_to_chat_template": "../chat_templates/llama-3.1-instruct.jinja",
+        "stop_tokens": "['<|eot_id|>']",
+        "api_key": "abc123",
+        "port": 8000,
+        "host": "localhost",
+        "GPU": "0",
+        "gpu_utilize": 0.9
+    }
+}
+```
+- GPU: GPU IDs to use, e.g., "0", "0,1", or "0,1,2,3".
+- port: Port number for the server, e.g., 8000, 8001, etc.
+- gpu_utilize: Percentage of GPU memory to use, e.g., 0.9 for 90%.
+
+### Notes
+- You can start servers for different models using this script.
+- Ensure that all server configurations are saved in the same directory (specified by [root_to_save]).
+
+By following these steps, you can run multiple local servers for hosting language models seamlessly.
 
 
 ### 2. Reward Model
